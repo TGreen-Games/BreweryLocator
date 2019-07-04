@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Brewery:Decodable{
+struct Brewery: Decodable {
     let id: Int
     let name: String
     let brewery_type: String
@@ -20,44 +20,33 @@ struct Brewery:Decodable{
     let website_url: String
 }
 
-class BreweryAPI:NSObject
-{
-    static let sharedInstance = BreweryAPI() //creates a singleton for class
-    var breweries = [Brewery]()
-    
-    
-    func CreateQuery(state: String, city: String? = nil)
-    {
-        breweries.removeAll()
+class BreweryAPI: NSObject {
+    static let sharedInstance = BreweryAPI() // creates a singleton for class
+
+    func fetchBreweries(state: String, completion: @escaping (_ breweries: Result<[Brewery], Error>) -> Void) {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.openbrewerydb.org"
         components.path = "/breweries"
-        if city != nil{
-            components.queryItems = [
-                URLQueryItem(name: "by_city", value: city),
-                URLQueryItem(name: "by_state", value: state)
-            ]
-        }
-        else
-        {
-            components.queryItems = [
-                URLQueryItem(name: "by_state", value: state)
-            ]
-        }
-        
+        components.queryItems = [
+            URLQueryItem(name: "by_state", value: state),
+        ]
+
         let url = components.url
-        URLSession.shared.dataTask(with: url!) { data,resonse,err in
-        guard let data = data else {return}
-            do{
-                let breweryData = try
-                JSONDecoder().decode([Brewery].self, from: data)
-                print(breweryData)
-                self.breweries = breweryData
+        URLSession.shared.dataTask(with: url!) { data, _, err in
+            DispatchQueue.main.async {
+                guard let data = data else { return }
+                do {
+                    let breweryData = try
+                        JSONDecoder().decode([Brewery].self, from: data)
+                    if breweryData.isEmpty {}
+                    print(breweryData)
+                    completion(.success(breweryData))
+                } catch {
+                    completion(Result.failure(err!))
+                    print("error", err!)
+                }
             }
-            catch{
-                print("error", err! )
-        }
         }
         .resume()
     }

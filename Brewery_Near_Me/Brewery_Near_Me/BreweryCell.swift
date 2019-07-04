@@ -9,14 +9,11 @@
 import UIKit
 
 class BreweryCell: UITableViewCell {
+    @IBOutlet var breweryName: UILabel!
+    @IBOutlet var breweryAddress: UILabel!
+    @IBOutlet var breweryNumber: UILabel!
 
-    @IBOutlet weak var breweryName: UILabel!
-    @IBOutlet weak var breweryAddress: UILabel!
-    @IBOutlet weak var breweryNumber: UILabel!
-    
-    
-    func setBrewery(brewery: Brewery)
-    {
+    func setBrewery(brewery: Brewery) {
         breweryName.text = brewery.name
         let cityState = brewery.city + "," + brewery.state
         breweryAddress.text = cityState
