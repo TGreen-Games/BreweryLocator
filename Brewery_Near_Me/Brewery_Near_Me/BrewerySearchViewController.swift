@@ -13,6 +13,7 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
     var breweryData = [Brewery]()
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var pickerView: UIPickerView!
+    var selectedState = " "
     let defaultTextLabel = "Please Select a State"
     let states = ["Alaska",
                   "Alabama",
@@ -80,15 +81,18 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
     // Actions
     @IBAction func CreateQueryString(_: UIButton) {
         breweryData.removeAll()
-        if stateLabel.text == defaultTextLabel {
+        if selectedState.isEmpty {
+            presentAlertWithTitle(title: "State Not Selected", message: "Please select a state", options: "ok") { _ in
+            }
             return
-                // place alert to user here
         }
-        breweryInstance.fetchBreweries(state: stateLabel.text!, completion: { result in
+        breweryInstance.fetchBreweries(state: selectedState, completion: { result in
             switch result {
             case let .success(data):
                 self.changeViewController(breweryData: data)
             case let .failure(error):
+                self.presentAlertWithTitle(title: "Connection Failed", message: "Unable to reach API. Please check connecection", options: "Ok", completion: { _ in
+                })
                 print(error)
             }
         })
@@ -113,7 +117,12 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
 
     func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent _: Int) {
-        stateLabel.text = states[row]
+        selectedState = states[row]
+    }
+
+    func pickerView(_: UIPickerView, attributedTitleForRow row: Int, forComponent _: Int) -> NSAttributedString? {
+        let string = states[row]
+        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: UIColor.orange])
     }
 
     // Move to next view controller

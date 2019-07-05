@@ -23,22 +23,19 @@ class BreweryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if brewery == nil{
+        if brewery == nil {
+            presentAlertWithTitle(title: "Unable To Find Brewery", message: "Please select another one.", options: "Ok", completion: { _ in })
             return
-            //place error message here
-        }
-        else{
+        } else {
             SetBreweryData(breweryData: brewery!)
         }
     }
-    
-    func SetBreweryData(breweryData: Brewery){
-        
+
+    func SetBreweryData(breweryData: Brewery) {
         breweryTitle.text = breweryData.name
         breweryType.text = "Brewery Type: " + breweryData.brewery_type
-        breweryNumber.text = "Number: " +  breweryData.phone
+        breweryNumber.text = "Number: " + breweryData.phone
         breweryWebsite.text = breweryData.website_url
         breweryAddress.text = breweryData.city + "," + breweryData.state + " " + breweryData.street + " " + breweryData.postal_code
-
     }
 }

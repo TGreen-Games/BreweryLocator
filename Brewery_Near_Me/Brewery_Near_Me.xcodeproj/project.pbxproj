@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D27222822D0169000BD7980 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27222722D0169000BD7980 /* AlertController.swift */; };
 		2D2EE50B22B05AB7008A981A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EE50A22B05AB7008A981A /* AppDelegate.swift */; };
 		2D2EE50D22B05AB7008A981A /* BrewerySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EE50C22B05AB7008A981A /* BrewerySearchViewController.swift */; };
 		2D2EE51022B05AB7008A981A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2EE50E22B05AB7008A981A /* Main.storyboard */; };
@@ -16,12 +17,12 @@
 		2D2EE52322B0EA92008A981A /* BreweryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EE52222B0EA92008A981A /* BreweryTableViewController.swift */; };
 		2D2EE52522B0EC7F008A981A /* BreweryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EE52422B0EC7F008A981A /* BreweryCell.swift */; };
 		2D2EE52722B1B177008A981A /* BreweryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EE52622B1B177008A981A /* BreweryViewController.swift */; };
-		2D4589F422B34413000ED1CC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4589F322B34413000ED1CC /* AlertController.swift */; };
 		43E785118C31C95FF8C228B3 /* Pods_Brewery_Near_Me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5ACD9786CA12E6A1889ECB /* Pods_Brewery_Near_Me.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		116916CD4FC51D136073507F /* Pods-Brewery_Near_Me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery_Near_Me.debug.xcconfig"; path = "Target Support Files/Pods-Brewery_Near_Me/Pods-Brewery_Near_Me.debug.xcconfig"; sourceTree = "<group>"; };
+		2D27222722D0169000BD7980 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		2D2EE50722B05AB7008A981A /* Brewery_Near_Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewery_Near_Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2EE50A22B05AB7008A981A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2EE50C22B05AB7008A981A /* BrewerySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewerySearchViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		2D2EE52222B0EA92008A981A /* BreweryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryTableViewController.swift; sourceTree = "<group>"; };
 		2D2EE52422B0EC7F008A981A /* BreweryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCell.swift; sourceTree = "<group>"; };
 		2D2EE52622B1B177008A981A /* BreweryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryViewController.swift; sourceTree = "<group>"; };
-		2D4589F322B34413000ED1CC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E8B9DC4E8583F0D32B9C5683 /* Pods-Brewery_Near_Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery_Near_Me.release.xcconfig"; path = "Target Support Files/Pods-Brewery_Near_Me/Pods-Brewery_Near_Me.release.xcconfig"; sourceTree = "<group>"; };
 		FC5ACD9786CA12E6A1889ECB /* Pods_Brewery_Near_Me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewery_Near_Me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,9 +73,9 @@
 			children = (
 				2D2EE50E22B05AB7008A981A /* Main.storyboard */,
 				2D2EE50C22B05AB7008A981A /* BrewerySearchViewController.swift */,
+				2D27222722D0169000BD7980 /* AlertController.swift */,
 				2D2EE52222B0EA92008A981A /* BreweryTableViewController.swift */,
 				2D2EE52622B1B177008A981A /* BreweryViewController.swift */,
-				2D4589F322B34413000ED1CC /* AlertController.swift */,
 				2D2EE52422B0EC7F008A981A /* BreweryCell.swift */,
 				2D2EE51C22B0921E008A981A /* BreweryAPI.swift */,
 				2D2EE50A22B05AB7008A981A /* AppDelegate.swift */,
@@ -224,7 +224,7 @@
 				2D2EE52522B0EC7F008A981A /* BreweryCell.swift in Sources */,
 				2D2EE52722B1B177008A981A /* BreweryViewController.swift in Sources */,
 				2D2EE50D22B05AB7008A981A /* BrewerySearchViewController.swift in Sources */,
-				2D4589F422B34413000ED1CC /* AlertController.swift in Sources */,
+				2D27222822D0169000BD7980 /* AlertController.swift in Sources */,
 				2D2EE51D22B0921E008A981A /* BreweryAPI.swift in Sources */,
 				2D2EE50B22B05AB7008A981A /* AppDelegate.swift in Sources */,
 			);
