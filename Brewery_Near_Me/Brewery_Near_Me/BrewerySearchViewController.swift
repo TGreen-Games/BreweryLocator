@@ -6,6 +6,7 @@
 //  Copyright © 2019 Warren Green. All rights reserved.
 //
 
+import CoreLocation
 import UIKit
 
 class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
