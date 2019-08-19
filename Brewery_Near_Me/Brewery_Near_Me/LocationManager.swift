@@ -23,8 +23,6 @@ class LocationManager: NSObject {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
     }
-
- 
 }
 
 // MARK: - Core Location Delegate

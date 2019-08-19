@@ -8,19 +8,20 @@
 
 import CoreLocation
 import Foundation
+import MapKit
 
 struct Brewery: Decodable {
     let id: Int
     let name: String
-    let brewery_type: String
+    let brewery_type: String?
     let street: String
     let city: String
     let state: String
     let postal_code: String
     let longitude: String
     let latitude: String
-    let phone: String
-    let website_url: String
+    let phone: String?
+    let website_url: String?
     var distance: Double?
 
     var location: CLLocation {
@@ -53,10 +54,10 @@ class BreweryAPI: NSObject {
                         JSONDecoder().decode([Brewery].self, from: data)
                     if breweryData.isEmpty { print("No breweries found") }
                     var sortedBreweries = breweryData
-                    for brewery in 0..<sortedBreweries.count {
+                    for brewery in 0 ..< sortedBreweries.count {
                         sortedBreweries[brewery].distance = self.calculateDistance(brewery: sortedBreweries[brewery], localLocation: self.locationManager.exposedLocation)
                     }
-                    sortedBreweries.sort(by: {$0.distance! < $1.distance!})
+                    sortedBreweries.sort(by: { $0.distance! < $1.distance! })
                     completion(.success(sortedBreweries))
                 } catch {
                     completion(Result.failure(err!))

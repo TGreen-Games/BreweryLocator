@@ -100,9 +100,12 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
 
     func changeViewController(breweryData: [Brewery]) {
-        let breweryTableViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryTableViewController") as! BreweryTableViewController
-        breweryTableViewController.breweryData = breweryData
-        navigationController?.pushViewController(breweryTableViewController, animated: true)
+        let breweryTabController = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! BreweryTabBarController
+        definesPresentationContext = true
+        // let breweryTableViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryTableViewController") as! BreweryTableViewController
+        breweryTabController.breweryData = breweryData
+        // breweryTableViewController.modalPresentationStyle = .currentContext
+        navigationController?.pushViewController(breweryTabController, animated: true)
     }
 
     func numberOfComponents(in _: UIPickerView) -> Int {

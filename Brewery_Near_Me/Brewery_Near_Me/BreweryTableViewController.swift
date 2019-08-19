@@ -16,6 +16,8 @@ class BreweryTableViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        let breweryTabBarController = tabBarController as! BreweryTabBarController
+        breweryData = breweryTabBarController.breweryData
         // Do any additional setup after loading the view.
     }
 }

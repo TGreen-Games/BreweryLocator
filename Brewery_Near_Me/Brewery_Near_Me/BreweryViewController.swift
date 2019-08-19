@@ -33,8 +33,8 @@ class BreweryViewController: UIViewController {
 
     func SetBreweryData(breweryData: Brewery) {
         breweryTitle.text = breweryData.name
-        breweryType.text = "Brewery Type: " + breweryData.brewery_type
-        breweryNumber.text = "Number: " + breweryData.phone
+        breweryType.text = "Brewery Type: " + breweryData.brewery_type!
+        breweryNumber.text = "Number: " + breweryData.phone!
         breweryWebsite.text = breweryData.website_url
         breweryAddress.text = breweryData.city + "," + breweryData.state + " " + breweryData.street + " " + breweryData.postal_code
     }

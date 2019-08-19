@@ -89,9 +89,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77.599999999999994" y="49.925037481259373"/>
+            <point key="canvasLocation" x="28" y="-2"/>
         </scene>
-        <!--Brewery Table View Controller-->
+        <!--List-->
         <scene sceneID="gac-sF-JOw">
             <objects>
                 <viewController storyboardIdentifier="BreweryTableViewController" id="7tt-LJ-qOR" customClass="BreweryTableViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="An3-jk-Eq2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -164,13 +164,66 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pll-1I-c7F"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="List" id="jVz-aJ-s5x"/>
                     <connections>
                         <outlet property="tableView" destination="An3-jk-Eq2" id="aBw-bN-JSE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxN-0H-e3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981.60000000000002" y="49.925037481259373"/>
+            <point key="canvasLocation" x="1458" y="-651"/>
+        </scene>
+        <!--Brewery Tab Bar Controller-->
+        <scene sceneID="oKr-T1-oZK">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="0pK-73-0vy" customClass="BreweryTabBarController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ITq-xq-joj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7tt-LJ-qOR" kind="relationship" relationship="viewControllers" id="SZY-IG-Bh5"/>
+                        <segue destination="9BK-iH-XQ4" kind="relationship" relationship="viewControllers" id="Rdu-gq-jEd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cts-CM-TSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="-2"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="ZRw-aM-bGn">
+            <objects>
+                <viewController id="9BK-iH-XQ4" customClass="BreweryMap" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3IU-D5-Sgd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lqn-TB-i9F">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lqn-TB-i9F" firstAttribute="trailing" secondItem="3IU-D5-Sgd" secondAttribute="trailingMargin" id="QNq-5k-X0p"/>
+                            <constraint firstItem="lqn-TB-i9F" firstAttribute="top" secondItem="Qbg-39-gyd" secondAttribute="top" constant="36" id="XT0-Oi-KeH"/>
+                            <constraint firstItem="lqn-TB-i9F" firstAttribute="leading" secondItem="3IU-D5-Sgd" secondAttribute="leadingMargin" id="ZDf-it-SAp"/>
+                            <constraint firstItem="Qbg-39-gyd" firstAttribute="bottom" secondItem="lqn-TB-i9F" secondAttribute="bottom" constant="37" id="ada-ZJ-cPm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qbg-39-gyd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="TFr-ms-oUd">
+                        <color key="badgeColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="breweryMap" destination="lqn-TB-i9F" id="5MT-M7-5Yc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJh-qQ-non" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="704"/>
         </scene>
         <!--Brewery View Controller-->
         <scene sceneID="wFR-tH-9ov">
@@ -263,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFi-tA-wgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="69.715142428785612"/>
+            <point key="canvasLocation" x="2126" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Zi-lN-AYb">
@@ -279,10 +332,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikW-Yr-mOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-826" y="50"/>
+            <point key="canvasLocation" x="-823" y="-2"/>
         </scene>
     </scenes>
     <resources>
         <image name="beer-logo-design-brewery-label-on-black-vector-20449420" width="1000" height="861"/>
     </resources>
+    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
