@@ -10,22 +10,24 @@ import CoreLocation
 import Foundation
 import MapKit
 
-struct Brewery: Decodable {
+class Brewery: Decodable {
     let id: Int
     let name: String
-    let brewery_type: String?
+    let brewery_type: String
     let street: String
     let city: String
     let state: String
     let postal_code: String
-    let longitude: String
-    let latitude: String
+    let longitude: String?
+    let latitude: String?
     let phone: String?
     let website_url: String?
     var distance: Double?
 
-    var location: CLLocation {
+    var location: CLLocation? {
+        guard let latitude = latitude else { return nil }
         let latValue = Double(latitude)
+        guard let longitude = longitude else { return nil }
         let lonValue = Double(longitude)
         return CLLocation(latitude: latValue!, longitude: lonValue!)
     }
@@ -42,7 +44,6 @@ class BreweryAPI: NSObject {
         components.path = "/breweries"
         components.queryItems = [
             URLQueryItem(name: "by_state", value: state),
-            // URLQueryItem(name: "sort", value: city),
         ]
 
         let url = components.url
@@ -69,6 +70,7 @@ class BreweryAPI: NSObject {
     }
 
     func calculateDistance(brewery: Brewery, localLocation: CLLocation?) -> Double {
-        return brewery.location.distance(from: localLocation!)
+        guard let breweryLocation = brewery.location else { return Double.greatestFiniteMagnitude }
+        return breweryLocation.distance(from: localLocation!)
     }
 }

@@ -11,4 +11,5 @@ import UIKit
 
 class BreweryTabBarController: UITabBarController {
     var breweryData = [Brewery]()
+    var selectedState = " "
 }

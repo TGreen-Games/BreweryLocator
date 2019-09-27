@@ -17,6 +17,10 @@ class BreweryCell: UITableViewCell {
         breweryName.text = brewery.name
         let cityState = brewery.city + "," + brewery.state
         breweryAddress.text = cityState
-        breweryNumber.text = brewery.phone
+        if brewery.phone!.isEmpty {
+            breweryNumber.text = "N/A"
+        } else {
+            breweryNumber.text = brewery.phone?.toPhoneNumber()
+        }
     }
 }

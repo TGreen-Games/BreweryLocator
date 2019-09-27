@@ -10,11 +10,10 @@ import MapKit
 import UIKit
 
 class BreweryMap: UIViewController {
-    var isAlreadySelected = false
     var selectedAnnotationView = MKAnnotationView()
     @IBOutlet var breweryMap: MKMapView!
     var breweryData = [Brewery]()
-    let regionRadius: CLLocationDistance = 5000
+    let regionRadius: CLLocationDistance = 200_000
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,7 @@ class BreweryMap: UIViewController {
         breweryMap.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         let breweryTabController = tabBarController as! BreweryTabBarController
         breweryData = breweryTabController.breweryData
-        centerMapOnLocation(location: breweryData[0].location)
+        centerMapOnLocation(location: breweryData[0].location!)
         for brewery in breweryData {
             addAnnotation(brewery: brewery)
         }
@@ -46,6 +45,7 @@ class BreweryMap: UIViewController {
     }
 
     func addAnnotation(brewery: Brewery) {
+        if brewery.location == nil { return }
         let annotation = BreweryAnnotation(brewery: brewery)
         breweryMap.addAnnotation(annotation)
     }
@@ -58,15 +58,14 @@ extension BreweryMap: MKMapViewDelegate {
             return nil
         } else {
             let pinIdent = "Pin"
-            var pinView: MKPinAnnotationView
+            var pinView: MKAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdent) as? MKPinAnnotationView {
                 dequeuedView.annotation = annotation
                 pinView = dequeuedView
             } else {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: pinIdent)
-                pinView.animatesDrop = true
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: pinIdent)
                 pinView.canShowCallout = true
-                pinView.pinTintColor = .orange
+                pinView.image = #imageLiteral(resourceName: "beerLogo")
 
                 let btn = UIButton(type: .detailDisclosure)
                 pinView.rightCalloutAccessoryView = btn
@@ -95,7 +94,7 @@ final class BreweryAnnotation: NSObject, MKAnnotation {
     var brewery: Brewery
 
     init(brewery: Brewery) {
-        coordinate = brewery.location.coordinate
+        coordinate = brewery.location!.coordinate
         title = brewery.name
         self.brewery = brewery
 

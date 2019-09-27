@@ -9,13 +9,25 @@
 import CoreLocation
 import UIKit
 
-class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, DismissDelegate {
+    // Modal Delegate
+    func changeViews(state: String, data: [Brewery]) {
+        dismiss(animated: true, completion: nil)
+        let breweryTabController = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! BreweryTabBarController
+        definesPresentationContext = true
+        breweryTabController.breweryData = data
+        breweryTabController.selectedState = state
+        navigationController?.pushViewController(breweryTabController, animated: true)
+    }
+
     let breweryInstance = BreweryAPI.sharedInstance
     var breweryData = [Brewery]()
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var pickerView: UIPickerView!
+
+    private let locationManager = LocationManager()
     var selectedState = " "
-    let defaultTextLabel = "Please Select a State"
+    let defaultTextLabel = "Select a State"
     let states = ["Alaska",
                   "Alabama",
                   "Arkansas",
@@ -28,7 +40,6 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
                   "Delaware",
                   "Florida",
                   "Georgia",
-                  "Guam",
                   "Hawaii",
                   "Iowa",
                   "Idaho",
@@ -46,7 +57,7 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
                   "Mississippi",
                   "Montana",
                   "North Carolina",
-                  " North Dakota",
+                  "North Dakota",
                   "Nebraska",
                   "New Hampshire",
                   "New Jersey",
@@ -76,7 +87,12 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func viewWillAppear(_: Bool) {
+        let modalVC = storyboard?.instantiateViewController(withIdentifier: "ModalVC") as! ModalVC
+        modalVC.delegate = self
+        present(modalVC, animated: true, completion: nil)
     }
 
     // Actions
@@ -102,9 +118,8 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
     func changeViewController(breweryData: [Brewery]) {
         let breweryTabController = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! BreweryTabBarController
         definesPresentationContext = true
-        // let breweryTableViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryTableViewController") as! BreweryTableViewController
         breweryTabController.breweryData = breweryData
-        // breweryTableViewController.modalPresentationStyle = .currentContext
+        breweryTabController.selectedState = selectedState
         navigationController?.pushViewController(breweryTabController, animated: true)
     }
 
@@ -126,7 +141,7 @@ class BrewerySearchViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     func pickerView(_: UIPickerView, attributedTitleForRow row: Int, forComponent _: Int) -> NSAttributedString? {
         let string = states[row]
-        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: UIColor.orange])
+        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: UIColor.brown])
     }
 
     // Move to next view controller
