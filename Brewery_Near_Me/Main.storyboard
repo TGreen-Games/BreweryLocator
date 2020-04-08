@@ -565,6 +565,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="8" bottom="0.0" trailing="8"/>
+                        <viewLayoutGuide key="safeArea" id="A1o-1o-sVl"/>
                     </view>
                     <connections>
                         <outlet property="filterButton" destination="ezW-xv-Qvc" id="Ntk-1p-1Ik"/>
