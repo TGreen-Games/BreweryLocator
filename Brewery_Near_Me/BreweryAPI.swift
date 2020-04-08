@@ -10,6 +10,32 @@ import CoreLocation
 import Foundation
 import MapKit
 
+enum BreweryType: String, CaseIterable {
+    case micro
+    case regional
+    case brewpub
+    case large
+    case bar
+    case all
+
+    static func returnEnumType(brewery_type: String) -> BreweryType {
+        switch brewery_type {
+        case "micro":
+            return BreweryType.micro
+        case "reginal":
+            return BreweryType.regional
+        case "brewpub":
+            return BreweryType.brewpub
+        case "large":
+            return BreweryType.large
+        case "bar":
+            return BreweryType.bar
+        default:
+            return BreweryType.all
+        }
+    }
+}
+
 class Brewery: Decodable {
     let id: Int
     let name: String
@@ -23,6 +49,9 @@ class Brewery: Decodable {
     let phone: String?
     let website_url: String?
     var distance: Double?
+    var breweryTypeEnum: BreweryType? {
+        return BreweryType.returnEnumType(brewery_type: brewery_type)
+    }
 
     var location: CLLocation? {
         guard let latitude = latitude else { return nil }
@@ -71,6 +100,7 @@ class BreweryAPI: NSObject {
 
     func calculateDistance(brewery: Brewery, localLocation: CLLocation?) -> Double {
         guard let breweryLocation = brewery.location else { return Double.greatestFiniteMagnitude }
-        return breweryLocation.distance(from: localLocation!)
+        guard let location = localLocation else { return Double.greatestFiniteMagnitude }
+        return breweryLocation.distance(from: location)
     }
 }

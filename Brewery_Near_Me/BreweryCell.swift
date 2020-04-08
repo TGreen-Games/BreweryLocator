@@ -11,12 +11,11 @@ import UIKit
 class BreweryCell: UITableViewCell {
     @IBOutlet var breweryName: UILabel!
     @IBOutlet var breweryAddress: UILabel!
-    @IBOutlet var breweryNumber: UILabel!
 
     func setBrewery(brewery: Brewery) {
-        breweryName.text = brewery.name
-        let cityState = brewery.city + "," + brewery.state
-        breweryAddress.text = cityState
-        breweryNumber.text = brewery.phone?.toPhoneNumber()
+        breweryName.text = brewery.name.localizedUppercase
+        let cityState = brewery.city + ", " + brewery.state
+        breweryAddress.text = cityState.localizedUppercase
+        breweryAddress.adjustsFontSizeToFitWidth = true
     }
 }

@@ -10,39 +10,81 @@ import MapKit
 import UIKit
 
 class BreweryMap: UIViewController {
-    var isAlreadySelected = false
     var selectedAnnotationView = MKAnnotationView()
     @IBOutlet var breweryMap: MKMapView!
     var breweryData = [Brewery]()
-    let regionRadius: CLLocationDistance = 5000
+    var filteredBreweries = [Brewery]()
+    let regionRadius: CLLocationDistance = 200_000
+    private var filterViewController: FilterViewController!
+    @IBOutlet var searchContainer: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         breweryMap.delegate = self
         breweryMap.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        let breweryTabController = tabBarController as! BreweryTabBarController
-        breweryData = breweryTabController.breweryData
-        centerMapOnLocation(location: breweryData[0].location!)
+        breweryMap.centerMapOnLocation(breweryMap: breweryMap, location: breweryData[0].location!, regionRadius: regionRadius)
         for brewery in breweryData {
             addAnnotation(brewery: brewery)
         }
+        navigationController?.navigationBar.barTintColor = .white
+        var listImage: UIImage
+        var backImage: UIImage
+        if #available(iOS 13.0, *) {
+            listImage = UIImage(systemName: "list.bullet")!
+        } else {
+            listImage = #imageLiteral(resourceName: "icons8-list-24") // Fallback on earlier versions
+        }
+        if #available(iOS 13.0, *) {
+            backImage = UIImage(systemName: "chevron.left")!
+        } else {
+            backImage = #imageLiteral(resourceName: "Forward Arrow")
+        }
+        let backButton = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backToStateSelection))
+        let tableButton = UIBarButtonItem(image: listImage, style: .plain, target: self, action: #selector(changeView(sender:)))
+        navigationItem.setRightBarButton(tableButton, animated: true)
+        navigationItem.setLeftBarButton(backButton, animated: true)
+        navigationItem.title = breweryData[0].state.localizedUppercase
 
-        // Do any additional setup after loading the view.
+        filterViewController.searchController.searchResultsUpdater = self
+        filterViewController.delegate = self
+
+        searchContainer.clipsToBounds = false
+        searchContainer.layer.cornerRadius = 10
+        searchContainer.layer.shadowColor = UIColor.black.cgColor
+        searchContainer.layer.shadowOffset = .zero
+        searchContainer.layer.shadowOpacity = 0.5
+        searchContainer.layer.shadowRadius = 10.0
+        searchContainer.layer.shadowPath = UIBezierPath(rect: searchContainer.bounds).cgPath
+        filterViewController.view.clipsToBounds = true
+        filterViewController.view.layer.cornerRadius = 20
     }
 
-    /*
-     // MARK: - Navigation
+    override func viewWillAppear(_: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
+    var isFiltering: Bool {
+        let searchBarScopeIsFiltering =
+            filterViewController.currentCatagorySelected != BreweryType.all
+        return
+            (filterViewController.isSearchBarEmpty == false || searchBarScopeIsFiltering)
+    }
 
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        breweryMap.setRegion(coordinateRegion, animated: true)
+    @objc func changeView(sender _: UIBarButtonItem?) {
+        let breweryTable = storyboard?.instantiateViewController(withIdentifier: "BreweryTableViewController") as! BreweryTableViewController
+        breweryTable.breweryData = breweryData
+        navigationController?.pushViewController(breweryTable, animated: false)
+        navigationController?.popToViewController(breweryTable, animated: true)
+    }
+
+    @objc func backToStateSelection(sender _: UIBarButtonItem) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        if let searchView = segue.destination as? FilterViewController, segue.identifier == "EmbedSegue" {
+            filterViewController = searchView
+        }
     }
 
     func addAnnotation(brewery: Brewery) {
@@ -52,6 +94,7 @@ class BreweryMap: UIViewController {
     }
 }
 
+// Brewery Map Methods
 extension BreweryMap: MKMapViewDelegate {
     // Map Delegates
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -59,15 +102,14 @@ extension BreweryMap: MKMapViewDelegate {
             return nil
         } else {
             let pinIdent = "Pin"
-            var pinView: MKPinAnnotationView
+            var pinView: MKAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdent) as? MKPinAnnotationView {
                 dequeuedView.annotation = annotation
                 pinView = dequeuedView
             } else {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: pinIdent)
-                pinView.animatesDrop = true
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: pinIdent)
                 pinView.canShowCallout = true
-                pinView.pinTintColor = .orange
+                pinView.image = #imageLiteral(resourceName: "BeerCan")
 
                 let btn = UIButton(type: .detailDisclosure)
                 pinView.rightCalloutAccessoryView = btn
@@ -87,6 +129,57 @@ extension BreweryMap: MKMapViewDelegate {
         let breweryAnnotation = view.annotation as! BreweryAnnotation
         breweryViewController.brewery = breweryAnnotation.brewery
         navigationController?.pushViewController(breweryViewController, animated: true)
+    }
+
+    func placeAnnotations() {
+        let allAnnotations = breweryMap.annotations
+        breweryMap.removeAnnotations(allAnnotations)
+        if isFiltering {
+            for brewery in filteredBreweries {
+                addAnnotation(brewery: brewery)
+            }
+        } else {
+            for brewery in breweryData {
+                addAnnotation(brewery: brewery)
+            }
+        }
+    }
+}
+
+// SearchBar Methods
+extension BreweryMap: UISearchBarDelegate, UISearchResultsUpdating, scopeButtonPressed {
+    func scopeChanged(selectionCatagory: BreweryType) {
+        let searchTerm = filterViewController.searchController.searchBar.text
+        filterContentForSearchText(_searchText: searchTerm!, category: selectionCatagory)
+    }
+
+    func filterContentForSearchText(_searchText: String, category: BreweryType) {
+        breweryMap.removeAnnotations(breweryMap.annotations)
+        filteredBreweries = breweryData.filter { (brewery: Brewery) -> Bool in
+
+            let doesCategoryMatch = category == brewery.breweryTypeEnum
+
+            if filterViewController.isSearchBarEmpty {
+                return doesCategoryMatch
+            } else {
+                return doesCategoryMatch && brewery.name.lowercased()
+                    .contains(_searchText.lowercased())
+            }
+        }
+        placeAnnotations()
+    }
+
+    func updateSearchResults(for _: UISearchController) {
+        // let searchbar = filterViewController.searchBar
+        // let category = filterViewController.currentCategorySelected
+        // filterContentForSearchText(_searchText: searchbar!.text!, category: category)
+    }
+}
+
+extension MKMapView {
+    func centerMapOnLocation(breweryMap: MKMapView, location: CLLocation, regionRadius: CLLocationDistance) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        breweryMap.setRegion(coordinateRegion, animated: true)
     }
 }
 

@@ -6,57 +6,109 @@
 //  Copyright © 2019 Warren Green. All rights reserved.
 //
 
+import MapKit
 import UIKit
 
-class BreweryViewController: UIViewController {
-    @IBOutlet var breweryTitle: UILabel!
-
-    @IBOutlet var breweryImage: UIImageView!
-
+class BreweryViewController: UIViewController, MKMapViewDelegate {
+    @IBOutlet var breweryMap: MKMapView!
     @IBOutlet var breweryAddress: UITextView!
-    @IBOutlet var breweryWebsite: UITextView!
-
     @IBOutlet var breweryType: UILabel!
     @IBOutlet var breweryNumber: UITextView!
     var brewery: Brewery?
+    let regionRadius: CLLocationDistance = 200
+    @IBOutlet var breweryTitle: UILabel!
 
+    @IBOutlet var breweryView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBreweryPicture()
-        if brewery == nil {
-            presentAlertWithTitle(title: "Unable To Find Brewery", message: "Please select another one.", options: "Ok", completion: { _ in })
-            return
-        } else {
-            SetBreweryData(breweryData: brewery!)
-        }
-        breweryAddress.textContainer.maximumNumberOfLines = 1
+
+        breweryAddress.textContainer.maximumNumberOfLines = 2
         breweryNumber.textContainer.maximumNumberOfLines = 1
-        breweryWebsite.textContainer.maximumNumberOfLines = 1
+        breweryMap.delegate = self
+        breweryMap.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        guard let breweryLocation = brewery?.location else { return }
+        breweryMap.centerMapOnLocation(breweryMap: breweryMap, location: breweryLocation, regionRadius: regionRadius)
+        let annotation = BreweryAnnotation(brewery: brewery!)
+        breweryMap.addAnnotation(annotation)
+        SetBreweryData(breweryData: brewery!)
+        breweryView.layer.cornerRadius = 30
+        breweryView.layer.shadowColor = UIColor.black.cgColor
+        breweryView.layer.shadowOffset = .zero
+        breweryView.layer.shadowOpacity = 0.5
+        breweryView.layer.shadowRadius = 7.0
+        breweryView.layer.shadowPath = UIBezierPath(rect: breweryView.bounds).cgPath
+        definesPresentationContext = true
+    }
+
+    override func viewWillAppear(_: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
 
     func SetBreweryData(breweryData: Brewery) {
-        breweryTitle.text = breweryData.name
-        breweryType.text = "Brewery Type: " + breweryData.brewery_type
-        breweryNumber.text = breweryData.phone?.toPhoneNumber()
-        breweryWebsite.text = breweryData.website_url
-        breweryAddress.text = breweryData.city + "," + breweryData.state + " " + breweryData.street + " " + breweryData.postal_code
+        breweryTitle.text = breweryData.name.localizedUppercase
+        breweryType.text = breweryData.brewery_type.capitalized + " Brewery"
+
+        if breweryData.phone!.isEmpty {
+            breweryNumber.text = "N/A"
+        } else {
+            breweryNumber.text = breweryData.phone?.toPhoneNumber()
+        }
+        breweryAddress.text = breweryData.city + "," + breweryData.state + "\n" + breweryData.street + " " + breweryData.postal_code
     }
 
-    func setBreweryPicture() {
-        switch brewery?.brewery_type {
-        case "micro":
-            breweryImage.image = #imageLiteral(resourceName: "micro")
-        case "regional":
-            breweryImage.image = #imageLiteral(resourceName: "regional")
-        case "brewpub":
-            breweryImage.image = #imageLiteral(resourceName: "brewpub")
-        case "large":
-            breweryImage.image = #imageLiteral(resourceName: "large")
-        case "bar":
-            breweryImage.image = #imageLiteral(resourceName: "bar")
-        default:
-            breweryImage.image = #imageLiteral(resourceName: "beer-logo-design-brewery-label-on-black-vector-20449420")
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        } else {
+            let pinIdent = "Pin"
+            var pinView: MKAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdent) as? MKPinAnnotationView {
+                dequeuedView.annotation = annotation
+                pinView = dequeuedView
+            } else {
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: pinIdent)
+                pinView.canShowCallout = true
+                pinView.image = #imageLiteral(resourceName: "BeerCan")
+
+                let btn = UIButton(type: .detailDisclosure)
+                pinView.rightCalloutAccessoryView = btn
+            }
+
+            // let subtitleView = UILabel()
+            // subtitleView.font = subtitleView.font.withSize(12)
+            // subtitleView.numberOfLines = 0
+            // subtitleView.text = annotation.subtitle!
+            // pinView.detailCalloutAccessoryView = subtitleView
+            return pinView
         }
+    }
+
+//    func setImageToLabels(label: UITextView, image: UIImage) {
+//        let fullString = NSMutableAttributedString()
+//        let imageAttachment = NSTextAttachment()
+//        imageAttachment.image = image
+//        // imageAttachment.image = UIImage(cgImage: (imageAttachment.image?.cgImage)!, scale: image.scale, orientation: UIImage.Orientation.up)
+//
+//        let imageString = NSAttributedString(attachment: imageAttachment)
+//        let string = NSAttributedString(string: label.text)
+//
+//        fullString.append(imageString)
+//        fullString.append(string)
+//
+//        label.attributedText = fullString
+//        label.textAlignment = .center
+//        label.font = UIFont.systemFont(ofSize: 17)
+//    }
+
+    @IBAction func websiteButton(_: Any) {
+        guard let website = brewery?.website_url else { return }
+        if let URL = URL(string: website) {
+            UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+        }
+    }
+
+    @IBAction func exitButton(_: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
