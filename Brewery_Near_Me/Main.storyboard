@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="PhosphateInline.ttf">
-            <string>PhosphateInline</string>
-        </array>
         <array key="TitanOne-Regular.ttf">
             <string>TitanOne</string>
         </array>
@@ -24,32 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="TitleImage" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-Q7-TMR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="TitleImage" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-Q7-TMR">
                                 <rect key="frame" x="-8" y="0.0" width="422" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="COM-Ny-Xnw">
-                                <rect key="frame" x="20" y="694" width="389" height="88"/>
-                                <fontDescription key="fontDescription" name="PhosphateInline" family="PhosphateInline" pointSize="17"/>
-                                <state key="normal" image="HopHereButton">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <connections>
-                                    <action selector="exploreLocalBeers:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="Rv4-q9-dKB"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLORE BEERS IN" textAlignment="center" lineBreakMode="clip" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-BZ-sAF" userLabel="LocalStateLabel">
-                                <rect key="frame" x="75" y="725" width="280" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ro5-BZ-sAF" secondAttribute="height" multiplier="293:31" constant="62.612903225806463" id="Hhd-F6-jr3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="80a-hb-b4A">
-                                <rect key="frame" x="20" y="756" width="389" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="80a-hb-b4A" userLabel="Another State Button">
+                                <rect key="frame" x="20" y="769" width="374" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="HopHereButton2">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,30 +36,25 @@
                                     <action selector="viewAnotherState:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="Bkz-F6-YYl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW ANOTHER STATE" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" id="7pN-Ek-7R0" userLabel="ViewAnotherStateLabel">
-                                <rect key="frame" x="75" y="781" width="265" height="38"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXPLORE BEERS IN" textAlignment="center" lineBreakMode="clip" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-BZ-sAF" userLabel="LocalStateLabel">
+                                <rect key="frame" x="68" y="734" width="278" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="23"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dds-Rg-9fX" userLabel="Another State Button">
+                                <rect key="frame" x="16" y="701" width="374" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="HopHereButton">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewAnotherState:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="lmc-5D-2so"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="centerY" secondItem="0av-wf-h1i" secondAttribute="centerY" id="140-lh-ZI1"/>
-                            <constraint firstItem="COM-Ny-Xnw" firstAttribute="width" secondItem="80a-hb-b4A" secondAttribute="width" id="5ij-v8-Lhz"/>
-                            <constraint firstItem="COM-Ny-Xnw" firstAttribute="trailing" secondItem="80a-hb-b4A" secondAttribute="trailing" id="EkL-sk-mi2"/>
-                            <constraint firstItem="COM-Ny-Xnw" firstAttribute="leading" secondItem="ro5-BZ-sAF" secondAttribute="trailing" constant="-335" id="KR8-Tl-RBL"/>
-                            <constraint firstItem="ro5-BZ-sAF" firstAttribute="centerX" secondItem="7pN-Ek-7R0" secondAttribute="centerX" constant="7.5" id="L8d-Dt-k8x"/>
-                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="trailing" secondItem="Gv1-wj-BSZ" secondAttribute="trailing" id="PyR-ET-NHN"/>
-                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="leading" secondItem="0av-wf-h1i" secondAttribute="leadingMargin" constant="-28" id="arl-uG-Tas"/>
-                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="top" secondItem="0av-wf-h1i" secondAttribute="topMargin" constant="-88" id="g9E-Rg-egw"/>
-                            <constraint firstItem="80a-hb-b4A" firstAttribute="top" secondItem="ro5-BZ-sAF" secondAttribute="bottom" constant="8" id="h9U-mU-fyb"/>
-                            <constraint firstItem="COM-Ny-Xnw" firstAttribute="height" secondItem="80a-hb-b4A" secondAttribute="height" id="hZi-K8-WPx"/>
-                            <constraint firstItem="COM-Ny-Xnw" firstAttribute="top" secondItem="ro5-BZ-sAF" secondAttribute="bottom" constant="-54" id="mdT-aQ-nH5"/>
-                            <constraint firstItem="COM-Ny-Xnw" firstAttribute="leading" secondItem="80a-hb-b4A" secondAttribute="leading" id="r9s-vo-dJ8"/>
-                            <constraint firstItem="Gv1-wj-BSZ" firstAttribute="bottom" secondItem="COM-Ny-Xnw" secondAttribute="bottom" constant="80" id="uyH-dh-u9W"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gv1-wj-BSZ"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="title"/>
@@ -93,7 +66,6 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="exploreBeersButton" destination="COM-Ny-Xnw" id="5MR-0f-UAY"/>
                         <outlet property="localStateLabel" destination="ro5-BZ-sAF" id="y8o-Vx-hpr"/>
                     </connections>
                 </viewController>
@@ -109,8 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QJm-yc-XXS" customClass="StateTableView" customModule="Brewery_Near_Me" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="296" width="414" height="600"/>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJm-yc-XXS" customClass="StateTableView" customModule="Brewery_Near_Me" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="307" width="414" height="589"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StateCell" id="bkg-Ve-EJd" customClass="StateCell" customModule="Brewery_Near_Me" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="45.5"/>
@@ -156,7 +128,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QJm-yc-XXS" firstAttribute="top" secondItem="ipe-FN-yne" secondAttribute="top" constant="245" id="5ue-vk-koe"/>
+                            <constraint firstItem="QJm-yc-XXS" firstAttribute="top" secondItem="ipe-FN-yne" secondAttribute="top" constant="263" id="5ue-vk-koe"/>
                             <constraint firstAttribute="bottomMargin" secondItem="QJm-yc-XXS" secondAttribute="bottom" constant="-34" id="KzE-gO-es6"/>
                             <constraint firstItem="QJm-yc-XXS" firstAttribute="centerX" secondItem="44k-fd-fLm" secondAttribute="centerX" id="S9L-JP-CLw"/>
                             <constraint firstItem="QJm-yc-XXS" firstAttribute="leading" secondItem="ipe-FN-yne" secondAttribute="leading" id="syN-6D-pRV"/>
@@ -200,30 +172,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dallas, Texas" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="1" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-Vp-8t7">
-                                                    <rect key="frame" x="16" y="47" width="284" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dallas, Texas" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="1" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-Vp-8t7">
+                                                    <rect key="frame" x="16" y="31" width="284" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="284" id="mSX-0Y-S8f"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Forward Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cIT-G6-RfI">
-                                                    <rect key="frame" x="338" y="17" width="29" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brewery Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDD-WA-tB8">
-                                                    <rect key="frame" x="16" y="11" width="214" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Brewery Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDD-WA-tB8">
+                                                    <rect key="frame" x="16" y="11" width="214" height="23"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="214" id="X2y-xU-18i"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="20"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="Forward Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cIT-G6-RfI">
+                                                    <rect key="frame" x="365" y="17" width="29" height="35"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.45000000000000001"/>
+                                            <constraints>
+                                                <constraint firstItem="cnc-Vp-8t7" firstAttribute="top" relation="lessThanOrEqual" secondItem="MDD-WA-tB8" secondAttribute="bottom" constant="-3" id="5n5-6b-9wC"/>
+                                                <constraint firstItem="cIT-G6-RfI" firstAttribute="top" secondItem="uzY-52-2vF" secondAttribute="top" constant="17" id="6hB-yX-Yzu"/>
+                                                <constraint firstAttribute="bottom" secondItem="cIT-G6-RfI" secondAttribute="bottom" constant="16" id="CQn-4l-n8h"/>
+                                                <constraint firstItem="MDD-WA-tB8" firstAttribute="leading" secondItem="uzY-52-2vF" secondAttribute="leading" constant="16" id="QUP-04-t7f"/>
+                                                <constraint firstItem="MDD-WA-tB8" firstAttribute="top" secondItem="uzY-52-2vF" secondAttribute="top" constant="11" id="RC1-1h-Da3"/>
+                                                <constraint firstItem="cnc-Vp-8t7" firstAttribute="leading" secondItem="uzY-52-2vF" secondAttribute="leading" constant="16" id="aSY-lH-Wm6"/>
+                                                <constraint firstAttribute="bottom" secondItem="MDD-WA-tB8" secondAttribute="bottom" constant="34" id="gnU-a3-uKE"/>
+                                                <constraint firstAttribute="bottom" secondItem="cnc-Vp-8t7" secondAttribute="bottom" constant="9" id="jiq-xA-6bJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="cIT-G6-RfI" secondAttribute="trailing" constant="20" id="kWp-B9-ZHA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -333,7 +319,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" address="YES"/>
                                     </textView>
@@ -385,7 +371,7 @@
                                             <constraint firstAttribute="height" constant="33" id="HEN-b2-69y"/>
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
                                     </textView>
@@ -421,7 +407,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-1J-rff" userLabel="Seperator Line">
                                 <rect key="frame" x="71" y="516" width="343" height="2"/>
-                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -509,7 +495,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9V9-mO-vki" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LEJ-yc-Bxe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="  " id="LEJ-yc-Bxe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.81960784313725488" green="0.52941176470588236" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -535,11 +521,11 @@
             <objects>
                 <viewController id="iMb-Ba-Sga" customClass="FilterViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sj2-Lk-0Jm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-xv-Qvc">
-                                <rect key="frame" x="260" y="30" width="124" height="60"/>
+                                <rect key="frame" x="239" y="51" width="124" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Micro Brewery">
@@ -550,21 +536,23 @@
                                     <action selector="filterButton:" destination="1pM-xZ-MBH" eventType="touchUpInside" id="bPg-fo-Hqq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Forward Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mnw-lt-HGL">
-                                <rect key="frame" x="385" y="30" width="17" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awu-cG-Uxm">
-                                <rect key="frame" x="20" y="59" width="79" height="21"/>
+                                <rect key="frame" x="20" y="67" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="44" leading="8" bottom="8" trailing="8"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Forward Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mnw-lt-HGL">
+                                <rect key="frame" x="371" y="51" width="17" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="8" bottom="0.0" trailing="8"/>
+                        <viewLayoutGuide key="safeArea" id="A1o-1o-sVl"/>
                     </view>
                     <connections>
                         <outlet property="filterButton" destination="ezW-xv-Qvc" id="Ntk-1p-1Ik"/>
@@ -578,6 +566,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="  " width="16" height="16"/>
         <image name="Forward Arrow" width="25" height="25"/>
         <image name="HopHereButton" width="350" height="103.5"/>
         <image name="HopHereButton2" width="350" height="103.5"/>
@@ -589,7 +578,7 @@
         <image name="icons8-map-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5l4-t0-qmu"/>
+        <segue reference="9ap-yv-twU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

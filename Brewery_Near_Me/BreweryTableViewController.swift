@@ -53,7 +53,7 @@ class BreweryTableViewController: UIViewController {
 
         searchContainer.clipsToBounds = false
         searchContainer.layer.cornerRadius = 100
-        searchContainer.layer.
+        // searchContainer.layer.
         searchContainer.layer.shadowColor = UIColor.black.cgColor
         searchContainer.layer.shadowOffset = .zero
         searchContainer.layer.shadowOpacity = 0.5

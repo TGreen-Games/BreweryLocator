@@ -31,6 +31,10 @@ class FilterViewController: UIViewController, filterSelected {
         // searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
         filterView.addSubview(searchController.searchBar)
         filterView.subviews.last?.layer.cornerRadius = 15
+        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = -5
+
+        navigationItem.leftBarButtonItems = [negativeSpacer]
 
         // filterView.layer.cornerRadius = 15
         filterView.layer.shadowColor = UIColor.black.cgColor
