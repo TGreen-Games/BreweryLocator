@@ -15,7 +15,6 @@ class TitleViewController: UIViewController, sendLocationData {
     var breweryData = [Brewery]()
     let breweryInstance = BreweryAPI.sharedInstance
 
-    @IBOutlet var localStateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -54,7 +53,7 @@ class TitleViewController: UIViewController, sendLocationData {
                 if self.localState.count == 2 {
                     self.localState = self.locationManager.getFullStateName(stateCode: self.localState)
                 }
-                self.localStateLabel.text = "EXPLORE BEERS IN " + self.localState.localizedUppercase
+                self.exploreBeersButton.titleLabel?.text = "EXPLORE BEERS IN \(self.localState.localizedUppercase)"
             })
         } else {
             switchToStateController(isLocationAllowed: isLocationAllowed)

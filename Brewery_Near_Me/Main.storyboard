@@ -21,40 +21,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="TitleImage" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-Q7-TMR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" misplaced="YES" image="TitleImage" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-Q7-TMR">
                                 <rect key="frame" x="-8" y="0.0" width="422" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="80a-hb-b4A" userLabel="Another State Button">
-                                <rect key="frame" x="20" y="769" width="374" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="HopHereButton2">
-                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5l-Nl-Urx">
+                                <rect key="frame" x="30" y="731" width="354" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="dWN-dJ-hMI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="23"/>
+                                <state key="normal" title="View Another State">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewAnotherState:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="Bkz-F6-YYl"/>
+                                    <action selector="viewAnotherState:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="8TD-Vl-YMF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXPLORE BEERS IN" textAlignment="center" lineBreakMode="clip" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-BZ-sAF" userLabel="LocalStateLabel">
-                                <rect key="frame" x="68" y="734" width="278" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dB-ai-FaU">
+                                <rect key="frame" x="30" y="657" width="354" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="dUE-5d-X0C"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dds-Rg-9fX" userLabel="Another State Button">
-                                <rect key="frame" x="16" y="701" width="374" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="HopHereButton">
-                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Explore Beers In ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewAnotherState:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="lmc-5D-2so"/>
+                                    <action selector="exploreLocalBeers:" destination="Ldx-cW-1A9" eventType="touchUpInside" id="ek1-RS-edS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="top" secondItem="0av-wf-h1i" secondAttribute="top" id="AiG-vM-Ggn"/>
+                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="trailing" secondItem="Gv1-wj-BSZ" secondAttribute="trailing" id="KJl-xz-5FC"/>
+                            <constraint firstAttribute="bottom" secondItem="CQt-Q7-TMR" secondAttribute="bottom" id="Mr0-jD-2WM"/>
+                            <constraint firstItem="Gv1-wj-BSZ" firstAttribute="trailing" secondItem="7dB-ai-FaU" secondAttribute="trailing" constant="30" id="Vta-y7-Uxl"/>
+                            <constraint firstItem="7dB-ai-FaU" firstAttribute="leading" secondItem="Gv1-wj-BSZ" secondAttribute="leading" constant="30" id="ZRf-cm-yQk"/>
+                            <constraint firstItem="CQt-Q7-TMR" firstAttribute="leading" secondItem="0av-wf-h1i" secondAttribute="leading" id="bVk-0Z-4NT"/>
+                            <constraint firstItem="Gv1-wj-BSZ" firstAttribute="bottom" secondItem="t5l-Nl-Urx" secondAttribute="bottom" constant="67" id="dLq-iJ-rB0"/>
+                            <constraint firstItem="t5l-Nl-Urx" firstAttribute="top" secondItem="7dB-ai-FaU" secondAttribute="bottom" constant="10" id="h2P-oi-9DK"/>
+                            <constraint firstItem="t5l-Nl-Urx" firstAttribute="leading" secondItem="Gv1-wj-BSZ" secondAttribute="leading" constant="30" id="nVc-NC-oGC"/>
+                            <constraint firstItem="Gv1-wj-BSZ" firstAttribute="trailing" secondItem="t5l-Nl-Urx" secondAttribute="trailing" constant="30" id="yA2-Bo-kYc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gv1-wj-BSZ"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="title"/>
@@ -66,7 +94,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="localStateLabel" destination="ro5-BZ-sAF" id="y8o-Vx-hpr"/>
+                        <outlet property="exploreBeersButton" destination="7dB-ai-FaU" id="ufQ-Ay-wl5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXS-9r-2pY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -568,8 +596,6 @@
     <resources>
         <image name="  " width="16" height="16"/>
         <image name="Forward Arrow" width="25" height="25"/>
-        <image name="HopHereButton" width="350" height="103.5"/>
-        <image name="HopHereButton2" width="350" height="103.5"/>
         <image name="HopHereButtonB" width="416.5" height="123"/>
         <image name="HopHereButtonB2" width="416.5" height="123"/>
         <image name="HopHereTitleSearch" width="750" height="764"/>
