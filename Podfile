@@ -7,4 +7,5 @@ target 'Brewery_Near_Me' do
 
   # Pods for Brewery_Near_Me
   pod 'SwiftFormat/CLI'
+  pod 'FloatingPanel'
 end

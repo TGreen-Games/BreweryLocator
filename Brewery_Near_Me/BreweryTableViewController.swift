@@ -47,13 +47,9 @@ class BreweryTableViewController: UIViewController {
         let mapButton = UIBarButtonItem(image: mapImage, style: .plain, target: self, action: #selector(changeView))
         navigationItem.setLeftBarButton(backButton, animated: true)
         navigationItem.setRightBarButton(mapButton, animated: true)
-//        let subView = UIImageView(frame: searchContainer.bounds)
-//        subView.clipsToBounds = true
-//        subView.layer.cornerRadius = 10
 
         searchContainer.clipsToBounds = false
         searchContainer.layer.cornerRadius = 100
-        // searchContainer.layer.
         searchContainer.layer.shadowColor = UIColor.black.cgColor
         searchContainer.layer.shadowOffset = .zero
         searchContainer.layer.shadowOpacity = 0.5
@@ -147,8 +143,9 @@ extension BreweryTableViewController: UITableViewDataSource, UITableViewDelegate
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let breweryViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryViewController") as! BreweryViewController
-        breweryViewController.brewery = breweryData[indexPath.row]
-        navigationController?.pushViewController(breweryViewController, animated: true)
+        let breweryMap = storyboard?.instantiateViewController(withIdentifier: "MapController") as! BreweryMap
+        breweryMap.breweryData = breweryData
+        breweryMap.selectedBrewery = breweryData[indexPath.row]
+        navigationController?.pushViewController(breweryMap, animated: true)
     }
 }

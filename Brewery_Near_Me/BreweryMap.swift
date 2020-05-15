@@ -6,25 +6,33 @@
 //  Copyright © 2019 Warren Green. All rights reserved.
 //
 
+import FloatingPanel
 import MapKit
 import UIKit
 
-class BreweryMap: UIViewController {
+class BreweryMap: UIViewController, FloatingPanelControllerDelegate {
     var selectedAnnotationView = MKAnnotationView()
     @IBOutlet var breweryMap: MKMapView!
+    var selectedBrewery: Brewery?
     var breweryData = [Brewery]()
     var filteredBreweries = [Brewery]()
-    let regionRadius: CLLocationDistance = 200_000
+    let regionRadius: CLLocationDistance = 10000
     private var filterViewController: FilterViewController!
     @IBOutlet var searchContainer: UIView!
+    let fpc = FloatingPanelController()
+    var contentVC = BreweryViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         breweryMap.delegate = self
         breweryMap.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        breweryMap.centerMapOnLocation(breweryMap: breweryMap, location: breweryData[0].location!, regionRadius: regionRadius)
         for brewery in breweryData {
             addAnnotation(brewery: brewery)
+        }
+        if let brewery = selectedBrewery {
+            breweryMap.centerMapOnLocation(breweryMap: breweryMap, location: brewery.location!, regionRadius: regionRadius)
+        } else {
+            breweryMap.centerMapOnLocation(breweryMap: breweryMap, location: breweryData[0].location!, regionRadius: regionRadius)
         }
         navigationController?.navigationBar.barTintColor = .white
         var listImage: UIImage
@@ -43,7 +51,7 @@ class BreweryMap: UIViewController {
         let tableButton = UIBarButtonItem(image: listImage, style: .plain, target: self, action: #selector(changeView(sender:)))
         navigationItem.setRightBarButton(tableButton, animated: true)
         navigationItem.setLeftBarButton(backButton, animated: true)
-        navigationItem.title = breweryData[0].state.localizedUppercase
+        // navigationItem.title = breweryData[0].state.localizedUppercase
 
         filterViewController.searchController.searchResultsUpdater = self
         filterViewController.delegate = self
@@ -57,6 +65,13 @@ class BreweryMap: UIViewController {
         searchContainer.layer.shadowPath = UIBezierPath(rect: searchContainer.bounds).cgPath
         filterViewController.view.clipsToBounds = true
         filterViewController.view.layer.cornerRadius = 20
+        fpc.delegate = self
+        if let brewery = selectedBrewery {
+            let breweryViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryViewController") as! BreweryViewController
+            breweryViewController.brewery = brewery
+            fpc.set(contentViewController: breweryViewController)
+            present(fpc, animated: true, completion: nil)
+        }
     }
 
     override func viewWillAppear(_: Bool) {
@@ -73,11 +88,15 @@ class BreweryMap: UIViewController {
     @objc func changeView(sender _: UIBarButtonItem?) {
         let breweryTable = storyboard?.instantiateViewController(withIdentifier: "BreweryTableViewController") as! BreweryTableViewController
         breweryTable.breweryData = breweryData
+        fpc.dismiss(animated: true, completion: nil)
+        selectedBrewery = nil
         navigationController?.pushViewController(breweryTable, animated: false)
         navigationController?.popToViewController(breweryTable, animated: true)
     }
 
     @objc func backToStateSelection(sender _: UIBarButtonItem) {
+        fpc.dismiss(animated: true, completion: nil)
+        selectedBrewery = nil
         navigationController?.popToRootViewController(animated: true)
     }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -19,13 +19,35 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		CA2F7C2458F13233553F3B5D5AC6B79D /* Pods-Brewery_Near_Me-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47393EEF91934F29EA519C8E1413390D /* Pods-Brewery_Near_Me-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4BEB1407FB1544214668CCB5CACD2A3 /* Pods-Brewery_Near_Me-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E774068532E44B39FF0B868A372FC51 /* Pods-Brewery_Near_Me-dummy.m */; };
-		ECB1C929861F8E3AC8D79CA09CAD07A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2C000FFD2D40FD9F728E1F83134FDB1B /* FloatingPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C798ADD99A86382FD4E201D06BE860 /* FloatingPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36394F16966D99620981A230DB22F10E /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1024A12F5F347BF223E88AE492F19CE /* UIExtensions.swift */; };
+		3B01FA56FEFD2B3370085E84065BEB7D /* FloatingPanelSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C968987985F8E10A447D8E76C92C5 /* FloatingPanelSurfaceView.swift */; };
+		402EF39055C35C318A40499E3DAC8915 /* FloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD62403CDE91019B48EE688621D5A64 /* FloatingPanelController.swift */; };
+		547B03A415AE0122C3769209415EC297 /* Pods-Brewery_Near_Me-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10AFFC3DEF95470E5F4AAD65B24C38B2 /* Pods-Brewery_Near_Me-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		672C1161D858966C5BBC22F5F6D360D7 /* FloatingPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E044309C9A52332D6E85B79F905934 /* FloatingPanel-dummy.m */; };
+		68359FE30201D99840D564BF0ACE3CE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		843366134EB58985B503D170DACC2A73 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD06F7596CE0C0B2F8598F84F8FC5A7 /* FloatingPanel.swift */; };
+		88B188113A0568D4EDC17AB3CBE84629 /* Pods-Brewery_Near_Me-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 064EEA0FE6D83CE759B6E3DE09E98EA0 /* Pods-Brewery_Near_Me-dummy.m */; };
+		8A42899DC597962DCCC65F0F874BB9D0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2CC79E184E650E4263DF9F88FA374 /* Logger.swift */; };
+		975E7BC2F369B22E173641EEE5F073F1 /* FloatingPanelBackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB95CCC6EAE3C0038951A3F1425842B /* FloatingPanelBackdropView.swift */; };
+		A370787826261C7EBA7E1529D1729E2D /* FloatingPanelTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AC6FDF19BC8E067CD0785A8F44022 /* FloatingPanelTransitioning.swift */; };
+		A8ACA800D0915472599339CDEBE07A6A /* FloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC996978C08C4614C21C31840A010E3 /* FloatingPanelLayout.swift */; };
+		AAE1B9134D32C7B612C5CEAE638F0D9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		C17DD90FDB535CC886156FEA4A17B02C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		C3D4D7A6B5B5B42BC09DFE7EC5E55731 /* FloatingPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEDF940BA299C3232B4D6B7FF04A0D /* FloatingPanelView.swift */; };
+		D396A592D8469DD4D248230E01223FD7 /* FloatingPanelBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63243C26696CD8DCAD6FCC40AF5C9D74 /* FloatingPanelBehavior.swift */; };
+		F7376A4529D84064C33E52F7F316BBFF /* GrabberHandleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DEB83E9EE542F9B51A315979AEEBA /* GrabberHandleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6FCB414959AF9D041B9AE9C9CFEF399C /* PBXContainerItemProxy */ = {
+		BC35BD8967BF59C57C9E3DD26B4D52BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4874E7E655CEB4C01E4572AD903AEA21;
+			remoteInfo = FloatingPanel;
+		};
+		DEE7FEEA3777F84B489FC2BB56EBD11C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -35,125 +57,200 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E774068532E44B39FF0B868A372FC51 /* Pods-Brewery_Near_Me-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Brewery_Near_Me-dummy.m"; sourceTree = "<group>"; };
-		2317A952F9FC5F56A18AEAA5A18E37F9 /* Pods-Brewery_Near_Me.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Brewery_Near_Me.modulemap"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		33E1E8C562777D563D8A52919248D463 /* Pods-Brewery_Near_Me-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Brewery_Near_Me-acknowledgements.markdown"; sourceTree = "<group>"; };
-		462ACA8EDD0C48F2668F1F319E175C60 /* Pods-Brewery_Near_Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Brewery_Near_Me.release.xcconfig"; sourceTree = "<group>"; };
-		47393EEF91934F29EA519C8E1413390D /* Pods-Brewery_Near_Me-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Brewery_Near_Me-umbrella.h"; sourceTree = "<group>"; };
-		92B72BDB0610A5FCE13006C7CE7A1A25 /* Pods-Brewery_Near_Me-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Brewery_Near_Me-acknowledgements.plist"; sourceTree = "<group>"; };
+		012410DCEFC8645A21DFBD8872A6017F /* Pods-Brewery_Near_Me-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Brewery_Near_Me-acknowledgements.markdown"; sourceTree = "<group>"; };
+		05AC23B0A3A4D01A1EECBFFC79032C31 /* FloatingPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-prefix.pch"; sourceTree = "<group>"; };
+		064EEA0FE6D83CE759B6E3DE09E98EA0 /* Pods-Brewery_Near_Me-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Brewery_Near_Me-dummy.m"; sourceTree = "<group>"; };
+		079C968987985F8E10A447D8E76C92C5 /* FloatingPanelSurfaceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelSurfaceView.swift; path = Framework/Sources/FloatingPanelSurfaceView.swift; sourceTree = "<group>"; };
+		0A3AECCEB1D5E35B7AA9C96C2185B2AF /* Pods-Brewery_Near_Me-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Brewery_Near_Me-Info.plist"; sourceTree = "<group>"; };
+		10AFFC3DEF95470E5F4AAD65B24C38B2 /* Pods-Brewery_Near_Me-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Brewery_Near_Me-umbrella.h"; sourceTree = "<group>"; };
+		11FEFB822DEBD56E4EA6A039359C15AE /* Pods-Brewery_Near_Me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Brewery_Near_Me.debug.xcconfig"; sourceTree = "<group>"; };
+		2AD2CC79E184E650E4263DF9F88FA374 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Framework/Sources/Logger.swift; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		322DEB83E9EE542F9B51A315979AEEBA /* GrabberHandleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrabberHandleView.swift; path = Framework/Sources/GrabberHandleView.swift; sourceTree = "<group>"; };
+		376E9272A57AF4C58725E775E5476CB3 /* SwiftFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFormat.xcconfig; sourceTree = "<group>"; };
+		37AB144009527E3E5D8A8D06AA88AFAF /* FloatingPanel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.xcconfig; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46C798ADD99A86382FD4E201D06BE860 /* FloatingPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-umbrella.h"; sourceTree = "<group>"; };
+		5BD06F7596CE0C0B2F8598F84F8FC5A7 /* FloatingPanel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanel.swift; path = Framework/Sources/FloatingPanel.swift; sourceTree = "<group>"; };
+		63243C26696CD8DCAD6FCC40AF5C9D74 /* FloatingPanelBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelBehavior.swift; path = Framework/Sources/FloatingPanelBehavior.swift; sourceTree = "<group>"; };
+		634AC6FDF19BC8E067CD0785A8F44022 /* FloatingPanelTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelTransitioning.swift; path = Framework/Sources/FloatingPanelTransitioning.swift; sourceTree = "<group>"; };
+		635673D568AABF955B3924C22340D27F /* Pods-Brewery_Near_Me-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Brewery_Near_Me-acknowledgements.plist"; sourceTree = "<group>"; };
+		6AC996978C08C4614C21C31840A010E3 /* FloatingPanelLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelLayout.swift; path = Framework/Sources/FloatingPanelLayout.swift; sourceTree = "<group>"; };
+		6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingPanel.framework; path = FloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97916783F31931F5002CDAF3B645262F /* Pods-Brewery_Near_Me-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Brewery_Near_Me-frameworks.sh"; sourceTree = "<group>"; };
+		9AD62403CDE91019B48EE688621D5A64 /* FloatingPanelController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelController.swift; path = Framework/Sources/FloatingPanelController.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFormat.xcconfig; sourceTree = "<group>"; };
+		A88A754321040D8CD67388DEC8D62DFB /* FloatingPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingPanel-Info.plist"; sourceTree = "<group>"; };
+		B3428C177B8F825B1C169371D098D533 /* Pods-Brewery_Near_Me.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Brewery_Near_Me.modulemap"; sourceTree = "<group>"; };
 		B8CDD21DBB22F9165DA0E0ABACAAA30D /* Pods_Brewery_Near_Me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Brewery_Near_Me.framework; path = "Pods-Brewery_Near_Me.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D15951F1AD9C208D349547A7F84E40F4 /* Pods-Brewery_Near_Me-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Brewery_Near_Me-Info.plist"; sourceTree = "<group>"; };
-		F2F5C2161FDCD63160B5A71202EA474C /* Pods-Brewery_Near_Me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Brewery_Near_Me.debug.xcconfig"; sourceTree = "<group>"; };
+		C2FEDF940BA299C3232B4D6B7FF04A0D /* FloatingPanelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelView.swift; path = Framework/Sources/FloatingPanelView.swift; sourceTree = "<group>"; };
+		DBCED75AFD58F6608613E02F97FC5DD5 /* FloatingPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingPanel.modulemap; sourceTree = "<group>"; };
+		E01DD4427C3019C45EA9896ACE3A2E46 /* Pods-Brewery_Near_Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Brewery_Near_Me.release.xcconfig"; sourceTree = "<group>"; };
+		F1024A12F5F347BF223E88AE492F19CE /* UIExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIExtensions.swift; path = Framework/Sources/UIExtensions.swift; sourceTree = "<group>"; };
+		F7E044309C9A52332D6E85B79F905934 /* FloatingPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingPanel-dummy.m"; sourceTree = "<group>"; };
+		FEB95CCC6EAE3C0038951A3F1425842B /* FloatingPanelBackdropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelBackdropView.swift; path = Framework/Sources/FloatingPanelBackdropView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A38F02BD122926ABEDACF9E48AFDA68C /* Frameworks */ = {
+		0E25907FC421D8E714ADD71C47A8FDC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB1C929861F8E3AC8D79CA09CAD07A4 /* Foundation.framework in Frameworks */,
+				AAE1B9134D32C7B612C5CEAE638F0D9B /* Foundation.framework in Frameworks */,
+				C17DD90FDB535CC886156FEA4A17B02C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5EA91EBB5D67E385AC749FBEB5CF5F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68359FE30201D99840D564BF0ACE3CE2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		148924D42F0B989B30887C4BD68CE662 /* Support Files */ = {
+		0E5B789DA19D0A58F97A4BAEC4088282 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftFormat";
-			sourceTree = "<group>";
-		};
-		194F2211E88B1FA37FFC4A68424324AC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B8BF3EFA4A4D3A35CBEF4937F7705CD /* Pods-Brewery_Near_Me */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6B8BF3EFA4A4D3A35CBEF4937F7705CD /* Pods-Brewery_Near_Me */ = {
-			isa = PBXGroup;
-			children = (
-				2317A952F9FC5F56A18AEAA5A18E37F9 /* Pods-Brewery_Near_Me.modulemap */,
-				33E1E8C562777D563D8A52919248D463 /* Pods-Brewery_Near_Me-acknowledgements.markdown */,
-				92B72BDB0610A5FCE13006C7CE7A1A25 /* Pods-Brewery_Near_Me-acknowledgements.plist */,
-				1E774068532E44B39FF0B868A372FC51 /* Pods-Brewery_Near_Me-dummy.m */,
-				D15951F1AD9C208D349547A7F84E40F4 /* Pods-Brewery_Near_Me-Info.plist */,
-				47393EEF91934F29EA519C8E1413390D /* Pods-Brewery_Near_Me-umbrella.h */,
-				F2F5C2161FDCD63160B5A71202EA474C /* Pods-Brewery_Near_Me.debug.xcconfig */,
-				462ACA8EDD0C48F2668F1F319E175C60 /* Pods-Brewery_Near_Me.release.xcconfig */,
-			);
-			name = "Pods-Brewery_Near_Me";
-			path = "Target Support Files/Pods-Brewery_Near_Me";
-			sourceTree = "<group>";
-		};
-		717E5CB8C36289F022053164054847B2 /* SwiftFormat */ = {
-			isa = PBXGroup;
-			children = (
-				148924D42F0B989B30887C4BD68CE662 /* Support Files */,
-			);
-			name = SwiftFormat;
-			path = SwiftFormat;
-			sourceTree = "<group>";
-		};
-		99F959A2A3B3DB0D009C03193B37328B /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */,
 				B8CDD21DBB22F9165DA0E0ABACAAA30D /* Pods_Brewery_Near_Me.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B4BE7EA6762889896D8B43A53BE1AF4 /* Pods */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				717E5CB8C36289F022053164054847B2 /* SwiftFormat */,
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B96F5347C7557433FC750C02C135289 /* FloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				5BD06F7596CE0C0B2F8598F84F8FC5A7 /* FloatingPanel.swift */,
+				FEB95CCC6EAE3C0038951A3F1425842B /* FloatingPanelBackdropView.swift */,
+				63243C26696CD8DCAD6FCC40AF5C9D74 /* FloatingPanelBehavior.swift */,
+				9AD62403CDE91019B48EE688621D5A64 /* FloatingPanelController.swift */,
+				6AC996978C08C4614C21C31840A010E3 /* FloatingPanelLayout.swift */,
+				079C968987985F8E10A447D8E76C92C5 /* FloatingPanelSurfaceView.swift */,
+				634AC6FDF19BC8E067CD0785A8F44022 /* FloatingPanelTransitioning.swift */,
+				C2FEDF940BA299C3232B4D6B7FF04A0D /* FloatingPanelView.swift */,
+				322DEB83E9EE542F9B51A315979AEEBA /* GrabberHandleView.swift */,
+				2AD2CC79E184E650E4263DF9F88FA374 /* Logger.swift */,
+				F1024A12F5F347BF223E88AE492F19CE /* UIExtensions.swift */,
+				D4B537CA451642988E4F54DE67FD50A7 /* Support Files */,
+			);
+			name = FloatingPanel;
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
+		86535795709CF7596367AF0CF8D0097D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B96F5347C7557433FC750C02C135289 /* FloatingPanel */,
+				B0957F68C831E434F25D528712C85D45 /* SwiftFormat */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		9518BA307F7C17CCFB3D29DF78A2C8CD /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				B26E3B2F55300A14D1C27418E2D1E0EC /* Pods-Brewery_Near_Me */,
 			);
-			name = iOS;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AD1ACB38375260CF4E8D8C06C3D3C1DB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				376E9272A57AF4C58725E775E5476CB3 /* SwiftFormat.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftFormat";
+			sourceTree = "<group>";
+		};
+		B0957F68C831E434F25D528712C85D45 /* SwiftFormat */ = {
+			isa = PBXGroup;
+			children = (
+				AD1ACB38375260CF4E8D8C06C3D3C1DB /* Support Files */,
+			);
+			name = SwiftFormat;
+			path = SwiftFormat;
+			sourceTree = "<group>";
+		};
+		B26E3B2F55300A14D1C27418E2D1E0EC /* Pods-Brewery_Near_Me */ = {
+			isa = PBXGroup;
+			children = (
+				B3428C177B8F825B1C169371D098D533 /* Pods-Brewery_Near_Me.modulemap */,
+				012410DCEFC8645A21DFBD8872A6017F /* Pods-Brewery_Near_Me-acknowledgements.markdown */,
+				635673D568AABF955B3924C22340D27F /* Pods-Brewery_Near_Me-acknowledgements.plist */,
+				064EEA0FE6D83CE759B6E3DE09E98EA0 /* Pods-Brewery_Near_Me-dummy.m */,
+				97916783F31931F5002CDAF3B645262F /* Pods-Brewery_Near_Me-frameworks.sh */,
+				0A3AECCEB1D5E35B7AA9C96C2185B2AF /* Pods-Brewery_Near_Me-Info.plist */,
+				10AFFC3DEF95470E5F4AAD65B24C38B2 /* Pods-Brewery_Near_Me-umbrella.h */,
+				11FEFB822DEBD56E4EA6A039359C15AE /* Pods-Brewery_Near_Me.debug.xcconfig */,
+				E01DD4427C3019C45EA9896ACE3A2E46 /* Pods-Brewery_Near_Me.release.xcconfig */,
+			);
+			name = "Pods-Brewery_Near_Me";
+			path = "Target Support Files/Pods-Brewery_Near_Me";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				9B4BE7EA6762889896D8B43A53BE1AF4 /* Pods */,
-				99F959A2A3B3DB0D009C03193B37328B /* Products */,
-				194F2211E88B1FA37FFC4A68424324AC /* Targets Support Files */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				86535795709CF7596367AF0CF8D0097D /* Pods */,
+				0E5B789DA19D0A58F97A4BAEC4088282 /* Products */,
+				9518BA307F7C17CCFB3D29DF78A2C8CD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D4B537CA451642988E4F54DE67FD50A7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				DBCED75AFD58F6608613E02F97FC5DD5 /* FloatingPanel.modulemap */,
+				37AB144009527E3E5D8A8D06AA88AFAF /* FloatingPanel.xcconfig */,
+				F7E044309C9A52332D6E85B79F905934 /* FloatingPanel-dummy.m */,
+				A88A754321040D8CD67388DEC8D62DFB /* FloatingPanel-Info.plist */,
+				05AC23B0A3A4D01A1EECBFFC79032C31 /* FloatingPanel-prefix.pch */,
+				46C798ADD99A86382FD4E201D06BE860 /* FloatingPanel-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/FloatingPanel";
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		950EFFC607F30A04538E932AEEE35CA8 /* Headers */ = {
+		762B49C0AF1BD4B956053A6E4C37A52C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2F7C2458F13233553F3B5D5AC6B79D /* Pods-Brewery_Near_Me-umbrella.h in Headers */,
+				2C000FFD2D40FD9F728E1F83134FDB1B /* FloatingPanel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80F2891F11EAE529358C0E07CF23870 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547B03A415AE0122C3769209415EC297 /* Pods-Brewery_Near_Me-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,21 +259,40 @@
 /* Begin PBXNativeTarget section */
 		11B747765265E1D2BC92C79665A7BF45 /* Pods-Brewery_Near_Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 819AE77B5F55AE6C6FB019276325913F /* Build configuration list for PBXNativeTarget "Pods-Brewery_Near_Me" */;
+			buildConfigurationList = 9FFE57A7BE1A4F709E158E8595F23C06 /* Build configuration list for PBXNativeTarget "Pods-Brewery_Near_Me" */;
 			buildPhases = (
-				950EFFC607F30A04538E932AEEE35CA8 /* Headers */,
-				1AFC3DFBE71C09FC9F1DE42AA93C2B7F /* Sources */,
-				A38F02BD122926ABEDACF9E48AFDA68C /* Frameworks */,
-				0A3EDDD586BE44DA955714B98FE842B8 /* Resources */,
+				D80F2891F11EAE529358C0E07CF23870 /* Headers */,
+				497FDD6BAB789CC46A136B59933FE5D3 /* Sources */,
+				F5EA91EBB5D67E385AC749FBEB5CF5F4 /* Frameworks */,
+				FBBE1578A946521E6A3864E2AB776831 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				854BBB49CD512F918BB7E8C73A9D5CED /* PBXTargetDependency */,
+				4280F424107E739076A011DB0F137B9E /* PBXTargetDependency */,
+				DC95BF57A122C116D687179C06677819 /* PBXTargetDependency */,
 			);
 			name = "Pods-Brewery_Near_Me";
 			productName = "Pods-Brewery_Near_Me";
 			productReference = B8CDD21DBB22F9165DA0E0ABACAAA30D /* Pods_Brewery_Near_Me.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6044DE3C7C1CBDBFC5A9C046CA3BD8D7 /* Build configuration list for PBXNativeTarget "FloatingPanel" */;
+			buildPhases = (
+				762B49C0AF1BD4B956053A6E4C37A52C /* Headers */,
+				D873A09126421F30B264A30A3ADE66CB /* Sources */,
+				0E25907FC421D8E714ADD71C47A8FDC9 /* Frameworks */,
+				5FDD3CD220FC9D412FCF202F7E122871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingPanel;
+			productName = FloatingPanel;
+			productReference = 6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -189,17 +305,18 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 99F959A2A3B3DB0D009C03193B37328B /* Products */;
+			productRefGroup = 0E5B789DA19D0A58F97A4BAEC4088282 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */,
 				11B747765265E1D2BC92C79665A7BF45 /* Pods-Brewery_Near_Me */,
 				1CD0618C486973D5588EF20D2E8C0AEA /* SwiftFormat */,
 			);
@@ -207,7 +324,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0A3EDDD586BE44DA955714B98FE842B8 /* Resources */ = {
+		5FDD3CD220FC9D412FCF202F7E122871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBE1578A946521E6A3864E2AB776831 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,65 +341,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1AFC3DFBE71C09FC9F1DE42AA93C2B7F /* Sources */ = {
+		497FDD6BAB789CC46A136B59933FE5D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BEB1407FB1544214668CCB5CACD2A3 /* Pods-Brewery_Near_Me-dummy.m in Sources */,
+				88B188113A0568D4EDC17AB3CBE84629 /* Pods-Brewery_Near_Me-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D873A09126421F30B264A30A3ADE66CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672C1161D858966C5BBC22F5F6D360D7 /* FloatingPanel-dummy.m in Sources */,
+				843366134EB58985B503D170DACC2A73 /* FloatingPanel.swift in Sources */,
+				975E7BC2F369B22E173641EEE5F073F1 /* FloatingPanelBackdropView.swift in Sources */,
+				D396A592D8469DD4D248230E01223FD7 /* FloatingPanelBehavior.swift in Sources */,
+				402EF39055C35C318A40499E3DAC8915 /* FloatingPanelController.swift in Sources */,
+				A8ACA800D0915472599339CDEBE07A6A /* FloatingPanelLayout.swift in Sources */,
+				3B01FA56FEFD2B3370085E84065BEB7D /* FloatingPanelSurfaceView.swift in Sources */,
+				A370787826261C7EBA7E1529D1729E2D /* FloatingPanelTransitioning.swift in Sources */,
+				C3D4D7A6B5B5B42BC09DFE7EC5E55731 /* FloatingPanelView.swift in Sources */,
+				F7376A4529D84064C33E52F7F316BBFF /* GrabberHandleView.swift in Sources */,
+				8A42899DC597962DCCC65F0F874BB9D0 /* Logger.swift in Sources */,
+				36394F16966D99620981A230DB22F10E /* UIExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		854BBB49CD512F918BB7E8C73A9D5CED /* PBXTargetDependency */ = {
+		4280F424107E739076A011DB0F137B9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FloatingPanel;
+			target = 4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */;
+			targetProxy = BC35BD8967BF59C57C9E3DD26B4D52BB /* PBXContainerItemProxy */;
+		};
+		DC95BF57A122C116D687179C06677819 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftFormat;
 			target = 1CD0618C486973D5588EF20D2E8C0AEA /* SwiftFormat */;
-			targetProxy = 6FCB414959AF9D041B9AE9C9CFEF399C /* PBXContainerItemProxy */;
+			targetProxy = DEE7FEEA3777F84B489FC2BB56EBD11C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1A9A78C83CB88DEF190C0D89F056E0F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 462ACA8EDD0C48F2668F1F319E175C60 /* Pods-Brewery_Near_Me.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Brewery_Near_Me/Pods-Brewery_Near_Me-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Brewery_Near_Me/Pods-Brewery_Near_Me.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		32C2FB3BD9A2402E2347CE50F405010A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -338,7 +448,7 @@
 		};
 		61D16562C88F67A248B236668FAC8E96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */;
+			baseConfigurationReference = 376E9272A57AF4C58725E775E5476CB3 /* SwiftFormat.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -417,9 +527,98 @@
 			};
 			name = Debug;
 		};
-		7E8E8E90CBF7097ECB1AE08099B1E6C5 /* Debug */ = {
+		662939AB60AC6F861DA5F437D8435325 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F5C2161FDCD63160B5A71202EA474C /* Pods-Brewery_Near_Me.debug.xcconfig */;
+			baseConfigurationReference = 37AB144009527E3E5D8A8D06AA88AFAF /* FloatingPanel.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C3BBACD8A24FFC23C19E9322196DC12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37AB144009527E3E5D8A8D06AA88AFAF /* FloatingPanel.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8A39F86ED80874B567AC60703BA6FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 376E9272A57AF4C58725E775E5476CB3 /* SwiftFormat.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B46462253FE0811738B259D4D7DA33B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11FEFB822DEBD56E4EA6A039359C15AE /* Pods-Brewery_Near_Me.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -455,21 +654,44 @@
 			};
 			name = Debug;
 		};
-		A8A39F86ED80874B567AC60703BA6FA1 /* Debug */ = {
+		D23C3D0EB1BE5E87E67618A33C961770 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */;
+			baseConfigurationReference = E01DD4427C3019C45EA9896ACE3A2E46 /* Pods-Brewery_Near_Me.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Brewery_Near_Me/Pods-Brewery_Near_Me-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Brewery_Near_Me/Pods-Brewery_Near_Me.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -483,6 +705,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6044DE3C7C1CBDBFC5A9C046CA3BD8D7 /* Build configuration list for PBXNativeTarget "FloatingPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C3BBACD8A24FFC23C19E9322196DC12 /* Debug */,
+				662939AB60AC6F861DA5F437D8435325 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6B2B7DF197DF6A7CA487150557230A41 /* Build configuration list for PBXAggregateTarget "SwiftFormat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -492,11 +723,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		819AE77B5F55AE6C6FB019276325913F /* Build configuration list for PBXNativeTarget "Pods-Brewery_Near_Me" */ = {
+		9FFE57A7BE1A4F709E158E8595F23C06 /* Build configuration list for PBXNativeTarget "Pods-Brewery_Near_Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E8E8E90CBF7097ECB1AE08099B1E6C5 /* Debug */,
-				1A9A78C83CB88DEF190C0D89F056E0F8 /* Release */,
+				B46462253FE0811738B259D4D7DA33B9 /* Debug */,
+				D23C3D0EB1BE5E87E67618A33C961770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

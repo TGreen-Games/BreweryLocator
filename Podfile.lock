@@ -1,16 +1,20 @@
 PODS:
+  - FloatingPanel (1.7.0)
   - SwiftFormat/CLI (0.40.13)
 
 DEPENDENCIES:
+  - FloatingPanel
   - SwiftFormat/CLI
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FloatingPanel
     - SwiftFormat
 
 SPEC CHECKSUMS:
+  FloatingPanel: f686602da8eff56375e577f19be37348a95f4e24
   SwiftFormat: d548b3585a6dbe64390177b386e95375b8c300b6
 
-PODFILE CHECKSUM: ecc2e28c9f70aba08e9bc65e742759b5af74baf4
+PODFILE CHECKSUM: 484cac94689b45d7c0a611dc310f7fdba056a346
 
 COCOAPODS: 1.7.2

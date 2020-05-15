@@ -6,11 +6,11 @@
 //  Copyright © 2019 Warren Green. All rights reserved.
 //
 
+import FloatingPanel
 import MapKit
 import UIKit
 
 class BreweryViewController: UIViewController, MKMapViewDelegate {
-    @IBOutlet var breweryMap: MKMapView!
     @IBOutlet var breweryAddress: UITextView!
     @IBOutlet var breweryType: UILabel!
     @IBOutlet var breweryNumber: UITextView!
@@ -22,14 +22,6 @@ class BreweryViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        breweryAddress.textContainer.maximumNumberOfLines = 2
-        breweryNumber.textContainer.maximumNumberOfLines = 1
-        breweryMap.delegate = self
-        breweryMap.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        guard let breweryLocation = brewery?.location else { return }
-        breweryMap.centerMapOnLocation(breweryMap: breweryMap, location: breweryLocation, regionRadius: regionRadius)
-        let annotation = BreweryAnnotation(brewery: brewery!)
-        breweryMap.addAnnotation(annotation)
         SetBreweryData(breweryData: brewery!)
         breweryView.layer.cornerRadius = 30
         breweryView.layer.shadowColor = UIColor.black.cgColor
