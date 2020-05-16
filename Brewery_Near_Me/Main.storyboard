@@ -369,19 +369,25 @@
                                         <size key="shadowOffset" width="0.0" height="10"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEH-Al-7LT">
-                                        <rect key="frame" x="27" y="349" width="266" height="104"/>
+                                        <rect key="frame" x="21" y="327" width="274" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Website  Button" image="HopHereButtonB"/>
+                                        <fontDescription key="fontDescription" name="TitanOne" family="Titan One" pointSize="17"/>
+                                        <state key="normal" title="Website">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="websiteButton:" destination="Udm-Ik-OCC" eventType="touchUpInside" id="CiF-Ek-tgz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BK-u4-vdq">
-                                        <rect key="frame" x="27" y="446" width="266" height="104"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Exit Button" image="HopHereButtonB2"/>
-                                        <connections>
-                                            <action selector="exitButton:" destination="Udm-Ik-OCC" eventType="touchUpInside" id="yJC-xc-Qfn"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -546,8 +552,6 @@
     <resources>
         <image name="  " width="16" height="16"/>
         <image name="Forward Arrow" width="25" height="25"/>
-        <image name="HopHereButtonB" width="416.5" height="123"/>
-        <image name="HopHereButtonB2" width="416.5" height="123"/>
         <image name="HopHereTitleSearch" width="750" height="764"/>
         <image name="TitleImage" width="750" height="1624.5"/>
         <image name="icons8-list-24" width="24" height="24"/>

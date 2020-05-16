@@ -144,10 +144,12 @@ extension BreweryMap: MKMapViewDelegate {
     }
 
     func mapView(_: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped _: UIControl) {
+        fpc.dismiss(animated: true, completion: nil)
         let breweryViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryViewController") as! BreweryViewController
         let breweryAnnotation = view.annotation as! BreweryAnnotation
         breweryViewController.brewery = breweryAnnotation.brewery
-        navigationController?.pushViewController(breweryViewController, animated: true)
+        fpc.set(contentViewController: breweryViewController)
+        present(fpc, animated: true, completion: nil)
     }
 
     func placeAnnotations() {
