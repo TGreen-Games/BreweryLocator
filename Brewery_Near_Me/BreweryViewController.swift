@@ -17,6 +17,7 @@ class BreweryViewController: UIViewController, MKMapViewDelegate {
     var brewery: Brewery?
     let regionRadius: CLLocationDistance = 200
     @IBOutlet var breweryTitle: UILabel!
+    @IBOutlet var websiteButton: UIButton!
 
     @IBOutlet var breweryView: UIView!
     override func viewDidLoad() {
