@@ -50,6 +50,7 @@ class BrewerySearchViewController: UIViewController, UITableViewDataSource, UITa
         stateTableView.layer.shadowPath = UIBezierPath(rect: stateTableView.tableHeaderView!.bounds).cgPath
         stateTableView.tableHeaderView?.clipsToBounds = true
         definesPresentationContext = true
+        edgesForExtendedLayout = .bottom
         searchView.sendSubviewToBack(HopHereImage)
     }
 
@@ -102,7 +103,11 @@ class BrewerySearchViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-        createQueryString(selectedState: stateTableView.states[indexPath.row])
+        if isFiltering {
+            createQueryString(selectedState: filteredStates[indexPath.row])
+        } else {
+            createQueryString(selectedState: stateTableView.states[indexPath.row])
+        }
     }
 }
 

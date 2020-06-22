@@ -97,7 +97,14 @@ class BreweryMap: UIViewController, FloatingPanelControllerDelegate {
     @objc func backToStateSelection(sender _: UIBarButtonItem) {
         fpc.dismiss(animated: true, completion: nil)
         selectedBrewery = nil
-        navigationController?.popToRootViewController(animated: true)
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: BrewerySearchViewController.self) {
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {

@@ -110,13 +110,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJm-yc-XXS" customClass="StateTableView" customModule="Brewery_Near_Me" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="307" width="414" height="589"/>
+                                <rect key="frame" x="0.0" y="307" width="320" height="589"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StateCell" id="bkg-Ve-EJd" customClass="StateCell" customModule="Brewery_Near_Me" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkg-Ve-EJd" id="Ghe-61-AJ3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKq-iW-BYq">
@@ -146,7 +146,7 @@
                                 </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="HopHereTitleSearch" id="44k-fd-fLm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="361"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
@@ -176,12 +176,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.86956521739137" y="-2.0089285714285712"/>
+            <point key="canvasLocation" x="860.625" y="-2.112676056338028"/>
         </scene>
         <!--List-->
         <scene sceneID="gac-sF-JOw">
             <objects>
-                <viewController storyboardIdentifier="BreweryTableViewController" id="7tt-LJ-qOR" customClass="BreweryTableViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BreweryTableViewController" providesPresentationContextTransitionStyle="YES" id="7tt-LJ-qOR" customClass="BreweryTableViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nLe-6B-6G9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +276,7 @@
         <!--Map-->
         <scene sceneID="ZRw-aM-bGn">
             <objects>
-                <viewController storyboardIdentifier="MapController" id="9BK-iH-XQ4" customClass="BreweryMap" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapController" providesPresentationContextTransitionStyle="YES" id="9BK-iH-XQ4" customClass="BreweryMap" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3IU-D5-Sgd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -505,9 +505,9 @@
         <!--Filter View Controller-->
         <scene sceneID="DbM-8O-QQ9">
             <objects>
-                <viewController id="iMb-Ba-Sga" customClass="FilterViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" modalPresentationStyle="overCurrentContext" id="iMb-Ba-Sga" customClass="FilterViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sj2-Lk-0Jm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-xv-Qvc">
@@ -560,7 +560,7 @@
         <image name="icons8-map-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5l4-t0-qmu"/>
+        <segue reference="9ap-yv-twU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

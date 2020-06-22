@@ -60,7 +60,7 @@ class BreweryTableViewController: UIViewController {
 
 //        navigationController?.navigationBar.titleTextAttributes =
 //            [NSAttributedString.Key.font: UIFon t(name: "PhosphateInline", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.black]
-        navigationItem.title = breweryData[0].state.localizedUppercase
+        navigationItem.title = selectedState
         // Do any additional setup after loading the view.
 
         // searchContainer.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
@@ -85,7 +85,7 @@ class BreweryTableViewController: UIViewController {
     }
 
     @objc func backToStateSelection(sender _: UIBarButtonItem) {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
 

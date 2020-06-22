@@ -27,6 +27,7 @@ class FilterViewController: UIViewController, filterSelected {
         super.viewDidLoad()
         searchController.searchBar.searchBarStyle = .prominent
         searchController.searchBar.clipsToBounds = false
+        searchController.searchBar.searchBarStyle = .prominent
         searchController.hidesNavigationBarDuringPresentation = false
         // searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
         filterView.addSubview(searchController.searchBar)
