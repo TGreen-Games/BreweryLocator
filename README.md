@@ -9,27 +9,25 @@
 
 ### Use your current Location or select a state.
 
- ![image](https://user-images.githubusercontent.com/38703626/69759215-275ca080-1127-11ea-9c54-daa5f8a9bf89.png)
-
-
-![image](https://user-images.githubusercontent.com/38703626/69759092-df3d7e00-1126-11ea-94ec-c6cd7b6c0527.png)
+ <img width="391" alt="Screen Shot 2020-02-28 at 8 34 42 PM" src="https://user-images.githubusercontent.com/38703626/87615172-b67af080-c6d7-11ea-9835-8a53e45d3de9.png">
+ 
+ <img width="389" alt="Screen Shot 2020-02-28 at 8 38 19 PM" src="https://user-images.githubusercontent.com/38703626/87615292-048ff400-c6d8-11ea-9757-a33cb38759ab.png">
 
 ---------------------------------------------------------------
 
  ### Look at breweries on a map or in a list sorted by distance.
 
-![image](https://user-images.githubusercontent.com/38703626/69760310-d306f000-1129-11ea-92d9-24955f757bf4.png)
 
+<img width="387" alt="Screen Shot 2020-02-28 at 8 35 02 PM" src="https://user-images.githubusercontent.com/38703626/87615403-44ef7200-c6d8-11ea-92e8-a3a61e94b4bd.png">
 
-![image](https://user-images.githubusercontent.com/38703626/69760395-15303180-112a-11ea-96b2-bee2742425ea.png)
+<img width="405" alt="Screen Shot 2020-02-28 at 8 35 18 PM" src="https://user-images.githubusercontent.com/38703626/87615465-7405e380-c6d8-11ea-99d0-d127d7ed5cae.png">
 
 ---------------------------------------------------------------
 
 ### Get more info on a brewery such as their website, number, and directions.
 
 
-![image](https://user-images.githubusercontent.com/38703626/69761253-748f4100-112c-11ea-96f2-f8ed5db91951.png)
-
+<img width="384" alt="Screen Shot 2020-02-28 at 8 35 28 PM" src="https://user-images.githubusercontent.com/38703626/87615503-85e78680-c6d8-11ea-8d29-40f371196f08.png">
 
 ## Project Status
 Still currently being worked on.
