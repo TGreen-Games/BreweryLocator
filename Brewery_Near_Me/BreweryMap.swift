@@ -51,7 +51,6 @@ class BreweryMap: UIViewController, FloatingPanelControllerDelegate {
         let tableButton = UIBarButtonItem(image: listImage, style: .plain, target: self, action: #selector(changeView(sender:)))
         navigationItem.setRightBarButton(tableButton, animated: true)
         navigationItem.setLeftBarButton(backButton, animated: true)
-        // navigationItem.title = breweryData[0].state.localizedUppercase
 
         filterViewController.searchController.searchResultsUpdater = self
         filterViewController.delegate = self
@@ -97,14 +96,12 @@ class BreweryMap: UIViewController, FloatingPanelControllerDelegate {
     @objc func backToStateSelection(sender _: UIBarButtonItem) {
         fpc.dismiss(animated: true, completion: nil)
         selectedBrewery = nil
-        for controller in self.navigationController!.viewControllers as Array {
+        for controller in navigationController!.viewControllers as Array {
             if controller.isKind(of: BrewerySearchViewController.self) {
                 self.navigationController!.popToViewController(controller, animated: true)
                 break
             }
         }
-
-
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {

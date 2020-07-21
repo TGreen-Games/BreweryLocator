@@ -57,15 +57,7 @@ class BreweryTableViewController: UIViewController {
         searchContainer.layer.shadowPath = UIBezierPath(rect: searchContainer.bounds).cgPath
         filterViewController.view.clipsToBounds = true
         filterViewController.view.layer.cornerRadius = 20
-
-//        navigationController?.navigationBar.titleTextAttributes =
-//            [NSAttributedString.Key.font: UIFon t(name: "PhosphateInline", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationItem.title = selectedState
-        // Do any additional setup after loading the view.
-
-        // searchContainer.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
-        print("we in here")
-        // filterViewContr oller.view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10)
     }
 
     override func viewWillAppear(_: Bool) {
@@ -85,7 +77,12 @@ class BreweryTableViewController: UIViewController {
     }
 
     @objc func backToStateSelection(sender _: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
+        for controller in navigationController!.viewControllers as Array {
+            if controller.isKind(of: BrewerySearchViewController.self) {
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
 }
 
@@ -145,7 +142,11 @@ extension BreweryTableViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let breweryMap = storyboard?.instantiateViewController(withIdentifier: "MapController") as! BreweryMap
         breweryMap.breweryData = breweryData
-        breweryMap.selectedBrewery = breweryData[indexPath.row]
+        if isFiltering {
+            breweryMap.selectedBrewery = filteredBreweries[indexPath.row]
+        } else {
+            breweryMap.selectedBrewery = breweryData[indexPath.row]
+        }
         navigationController?.pushViewController(breweryMap, animated: true)
     }
 }

@@ -29,7 +29,6 @@ class FilterViewController: UIViewController, filterSelected {
         searchController.searchBar.clipsToBounds = false
         searchController.searchBar.searchBarStyle = .prominent
         searchController.hidesNavigationBarDuringPresentation = false
-        // searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
         filterView.addSubview(searchController.searchBar)
         filterView.subviews.last?.layer.cornerRadius = 15
         let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
@@ -37,7 +36,6 @@ class FilterViewController: UIViewController, filterSelected {
 
         navigationItem.leftBarButtonItems = [negativeSpacer]
 
-        // filterView.layer.cornerRadius = 15
         filterView.layer.shadowColor = UIColor.black.cgColor
         filterView.layer.shadowOffset = .zero
         filterView.layer.shadowOpacity = 0.5
@@ -46,18 +44,14 @@ class FilterViewController: UIViewController, filterSelected {
         filterView.layer.shouldRasterize = true
         currentCatagorySelected = BreweryType.all
         filterButton.setTitle(currentCatagorySelected.rawValue.capitalized, for: .normal)
-        // let topConstraint = NSLayoutConstraint(item: searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0)
-        // searchController.searchBar.addConstraint(topConstraint)
-        // searchController.searchBar.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0.5, leading: 0, bottom: 0, trailing: 0)
         searchController.searchBar.sizeToFit()
 
-        // filterView.layoutMargins = UIEdgeInsets(top: 100.0, left: 40, bottom: .zero, right: 40)
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func filterBreweryType(_: Any) {
         let modalVC = storyboard?.instantiateViewController(withIdentifier: "ModalVC") as! ModalVC
         modalVC.delegate = self
+        modalVC.modalPresentationStyle = .fullScreen
         present(modalVC, animated: true, completion: nil)
     }
 

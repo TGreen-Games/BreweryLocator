@@ -67,31 +67,10 @@ class BreweryViewController: UIViewController, MKMapViewDelegate {
                 pinView.rightCalloutAccessoryView = btn
             }
 
-            // let subtitleView = UILabel()
-            // subtitleView.font = subtitleView.font.withSize(12)
-            // subtitleView.numberOfLines = 0
-            // subtitleView.text = annotation.subtitle!
-            // pinView.detailCalloutAccessoryView = subtitleView
             return pinView
         }
     }
 
-//    func setImageToLabels(label: UITextView, image: UIImage) {
-//        let fullString = NSMutableAttributedString()
-//        let imageAttachment = NSTextAttachment()
-//        imageAttachment.image = image
-//        // imageAttachment.image = UIImage(cgImage: (imageAttachment.image?.cgImage)!, scale: image.scale, orientation: UIImage.Orientation.up)
-//
-//        let imageString = NSAttributedString(attachment: imageAttachment)
-//        let string = NSAttributedString(string: label.text)
-//
-//        fullString.append(imageString)
-//        fullString.append(string)
-//
-//        label.attributedText = fullString
-//        label.textAlignment = .center
-//        label.font = UIFont.systemFont(ofSize: 17)
-//    }
 
     @IBAction func websiteButton(_: Any) {
         guard let website = brewery?.website_url else { return }

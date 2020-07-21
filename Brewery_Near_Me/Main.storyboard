@@ -113,10 +113,10 @@
                                 <rect key="frame" x="0.0" y="307" width="320" height="589"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StateCell" id="bkg-Ve-EJd" customClass="StateCell" customModule="Brewery_Near_Me" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="45.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkg-Ve-EJd" id="Ghe-61-AJ3">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKq-iW-BYq">
@@ -507,14 +507,27 @@
             <objects>
                 <viewController definesPresentationContext="YES" modalPresentationStyle="overCurrentContext" id="iMb-Ba-Sga" customClass="FilterViewController" customModule="Brewery_Near_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sj2-Lk-0Jm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-xv-Qvc">
-                                <rect key="frame" x="239" y="51" width="124" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Micro Brewery">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="Forward Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mnw-lt-HGL">
+                                <rect key="frame" x="367" y="85" width="40" height="35"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awu-cG-Uxm">
+                                <rect key="frame" x="20" y="91" width="56" height="24"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="44" leading="8" bottom="8" trailing="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-xv-Qvc">
+                                <rect key="frame" x="227" y="70" width="132" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="jd7-Hq-CAV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="All">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -522,21 +535,18 @@
                                     <action selector="filterButton:" destination="1pM-xZ-MBH" eventType="touchUpInside" id="bPg-fo-Hqq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awu-cG-Uxm">
-                                <rect key="frame" x="20" y="67" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <directionalEdgeInsets key="directionalLayoutMargins" top="44" leading="8" bottom="8" trailing="8"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Forward Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mnw-lt-HGL">
-                                <rect key="frame" x="371" y="51" width="17" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="A1o-1o-sVl" firstAttribute="trailing" secondItem="ezW-xv-Qvc" secondAttribute="trailing" constant="55" id="40A-ei-lRe"/>
+                            <constraint firstItem="mnw-lt-HGL" firstAttribute="top" secondItem="ezW-xv-Qvc" secondAttribute="top" constant="-1" id="4Si-qF-syT"/>
+                            <constraint firstItem="A1o-1o-sVl" firstAttribute="bottom" secondItem="mnw-lt-HGL" secondAttribute="bottom" constant="22" id="R2Q-eW-G0z"/>
+                            <constraint firstItem="mnw-lt-HGL" firstAttribute="leading" secondItem="ezW-xv-Qvc" secondAttribute="trailing" constant="8" id="Sdd-jG-SZP"/>
+                            <constraint firstItem="A1o-1o-sVl" firstAttribute="bottom" secondItem="ezW-xv-Qvc" secondAttribute="bottom" constant="22" id="bMY-NZ-leF"/>
+                            <constraint firstItem="awu-cG-Uxm" firstAttribute="leading" secondItem="A1o-1o-sVl" secondAttribute="leading" constant="20" id="cWZ-tf-r7c"/>
+                            <constraint firstItem="A1o-1o-sVl" firstAttribute="bottom" secondItem="awu-cG-Uxm" secondAttribute="bottom" constant="27" id="hJL-cT-kIZ"/>
+                            <constraint firstItem="ezW-xv-Qvc" firstAttribute="top" secondItem="awu-cG-Uxm" secondAttribute="top" constant="-5" id="lgI-hf-YKN"/>
+                        </constraints>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="8" bottom="0.0" trailing="8"/>
                         <viewLayoutGuide key="safeArea" id="A1o-1o-sVl"/>
                     </view>
@@ -560,7 +570,7 @@
         <image name="icons8-map-24" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9ap-yv-twU"/>
+        <segue reference="5l4-t0-qmu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

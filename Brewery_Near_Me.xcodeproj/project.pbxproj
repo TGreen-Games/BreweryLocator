@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2D18EB502404C68000BA4F0F /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EB4F2404C68000BA4F0F /* TitanOne-Regular.ttf */; };
-		2D2FAB2023A71E2A00D3FA08 /* BreweryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2FAB1F23A71E2900D3FA08 /* BreweryTabBarController.swift */; };
 		2D2FAB2223A71E3F00D3FA08 /* BrewerySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2FAB2123A71E3F00D3FA08 /* BrewerySearchViewController.swift */; };
 		2D2FAB2423A71E6800D3FA08 /* BreweryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2FAB2323A71E6800D3FA08 /* BreweryTableViewController.swift */; };
 		2D2FAB2623AD6A4300D3FA08 /* PhosphateInline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D2FAB2523AD6A4300D3FA08 /* PhosphateInline.ttf */; };
@@ -36,7 +35,6 @@
 		2B8126D190E765AA5D55CDB3 /* Pods_Brewery_Near_Me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewery_Near_Me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D18EB4F2404C68000BA4F0F /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
 		2D2EE50722B05AB7008A981A /* Brewery_Near_Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewery_Near_Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D2FAB1F23A71E2900D3FA08 /* BreweryTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryTabBarController.swift; sourceTree = "<group>"; };
 		2D2FAB2123A71E3F00D3FA08 /* BrewerySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewerySearchViewController.swift; sourceTree = "<group>"; };
 		2D2FAB2323A71E6800D3FA08 /* BreweryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryTableViewController.swift; sourceTree = "<group>"; };
 		2D2FAB2523AD6A4300D3FA08 /* PhosphateInline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PhosphateInline.ttf; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				2DA5ACB223A70D8F00467DD3 /* TitleViewController.swift */,
 				2D2FAB2123A71E3F00D3FA08 /* BrewerySearchViewController.swift */,
 				2DA5ACB023A70D8700467DD3 /* StateTableView.swift */,
-				2D2FAB1F23A71E2900D3FA08 /* BreweryTabBarController.swift */,
 				2DA5ACAE23A70D7F00467DD3 /* ModalVC.swift */,
 				2DA5ACBA23A70DC100467DD3 /* FilterViewController.swift */,
 				2D2FAB2323A71E6800D3FA08 /* BreweryTableViewController.swift */,
@@ -284,7 +281,6 @@
 				2DA5ACBF23A70DDE00467DD3 /* BreweryMap.swift in Sources */,
 				2DA5ACAF23A70D7F00467DD3 /* ModalVC.swift in Sources */,
 				2DA5ACC323A70E1100467DD3 /* AppDelegate.swift in Sources */,
-				2D2FAB2023A71E2A00D3FA08 /* BreweryTabBarController.swift in Sources */,
 				2DA5ACB323A70D8F00467DD3 /* TitleViewController.swift in Sources */,
 				2DA5ACBD23A70DCB00467DD3 /* BreweryViewController.swift in Sources */,
 				2DA5ACC523A70E1F00467DD3 /* AlertController.swift in Sources */,
